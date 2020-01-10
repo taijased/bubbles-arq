@@ -5,6 +5,8 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles)
 
 // Global style css
 import './style/font.css'
