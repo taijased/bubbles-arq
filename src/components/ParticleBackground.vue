@@ -48,8 +48,8 @@ export default {
   position: absolute;
   transform: translateY(-10vh);
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  // animation-timing-function: linear;
+  // animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
 
   .circle {
     width: 100%;
@@ -87,6 +87,9 @@ export default {
     //   }
     // }
 
+    &:hover {
+      cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png"), auto;
+    }
   }
 
 
