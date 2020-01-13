@@ -2,7 +2,7 @@
     .header-main
         .navigation
             img.logo(src="../assets/arq-logo.svg")
-            .primary-link About us
+            .primary-link(@click="goToAbout()") About us
             .left-controls
                 .primary-link Want an awesome project?
                 #burger(@click="openBurger()", :class="{ 'open': burgerStatus }")
@@ -27,7 +27,12 @@ export default {
     methods: {
         openBurger() {
             this.burgerStatus = !this.burgerStatus
+        },
+        goToAbout() {
+            this.$router.push('/about')
         }
+
+
     }
 }
 
