@@ -1,17 +1,15 @@
 <template lang="pug">
   .wrapper
     Header
-    ParticleBackground
+    router-view
 </template>
 
 <script>
 import Header from '../components/Header';
-import ParticleBackground from '../components/ParticleBackground';
 
 export default {
   components: {
-    Header,
-    ParticleBackground
+    Header
   }
 }
 
@@ -21,6 +19,9 @@ export default {
 
 
 <style lang="stylus">
+.wrapper 
+  width: 100%;
+  height: 100%;
 
 // @media screen and (min-width: 1000px) 
 //   #main

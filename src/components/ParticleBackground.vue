@@ -6,9 +6,6 @@
 </template>
 
 <script>
-
-
-
 export default {
 
 }
@@ -16,30 +13,13 @@ export default {
 
 </script>
 
-
-
 <style lang="scss" scope>
-
-.test {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-image: radial-gradient(63.89% 63.89% at 35.33% 25.66%, rgba(248, 57, 2, 0.5) 0%, #F83902 100%);
-
-}
 .container {
   width: 100%;
   height: 100%;
-}
-
-.background {
-  display: block;
+  overflow: hidden;
+  display:inline-block;
   position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 .circle-container {

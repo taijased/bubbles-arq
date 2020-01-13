@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 
 const Index = () => import('../views/Index.vue')
+const Main = () => import('../views/index/Main.vue')
 
 
 const Error404 = () => import('../views/Error404.vue')
@@ -15,7 +16,14 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    component: Index
+    component: Index,
+    children: [
+      {
+        path: '/',
+        component: Main
+      },
+    ]
+
   },
   {
     path: '/privacypolicy',
