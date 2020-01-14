@@ -8,9 +8,27 @@
 
 <script>
 
+import { mapGetters, mapActions} from 'vuex';
 
 export default {
-  
+  computed: {
+    ...mapGetters({
+      getMenuStatus: "header/getMenuStatus",
+    }),
+  },
+  methods: {
+    ...mapActions({
+      openMenu: "header/openMenu",
+    }),
+  },
+  created() {
+    this.$nextTick(() => {
+      document.body.style.overflow = "hidden"
+      if (this.getMenuStatus) {
+        this.openMenu()
+      }
+    })
+  }
 }
 
 
@@ -21,15 +39,14 @@ export default {
 <style lang="stylus" scoped>
 
 .main
-    width 100%
-    height 100%
+    height $main-height 
     display flex
     flex-direction column
     justify-content space-between
     align-items center
+    overflow hidden
     &__content
       z-index 10
-      margin-top $header-height
       font-family: 'TT Norms Medium';
       font-style: normal;
       font-weight: bold;
@@ -41,5 +58,4 @@ export default {
       color: #4737D6;
   img
     width 60%
-
 </style>

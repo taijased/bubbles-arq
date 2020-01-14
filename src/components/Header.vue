@@ -1,11 +1,12 @@
 <template lang="pug">
     .header-main
         .navigation
-            img.logo(src="../assets/arq-logo.svg")
-            .primary-link(@click="goToAbout()") About us
+            img.logo(v-if="!getMenuStatus", @click="goToIndex()", src="../assets/arq-logo.svg")
+            img.logo(v-else, @click="goToIndex()", src="../assets/arq-logo_white.svg")
+            .primary-link(v-if="!getMenuStatus", @click="goToAbout()", style="margin-left: 8.5vw;") About us
             .left-controls
-                .primary-link Want an awesome project?
-                #burger(@click="openBurger()", :class="{ 'open': burgerStatus }")
+                .primary-link(v-if="!getMenuStatus") Want an awesome project?
+                #burger(@click="actionWithBurger()", :class="{ 'open': getMenuStatus }")
                     span
                     span
                     span
@@ -16,23 +17,33 @@
 
 <script>
 
+import { mapGetters, mapActions} from 'vuex';
 
 
 export default {
-    data() {
-        return {
-            burgerStatus: false
-        }
+    computed: {
+        ...mapGetters({
+            getMenuStatus: "header/getMenuStatus",
+        }),
     },
     methods: {
-        openBurger() {
-            this.burgerStatus = !this.burgerStatus
+        ...mapActions({
+            openMenu: "header/openMenu",
+        }),
+        actionWithBurger() {
+            if (this.getMenuStatus) {
+                this.$router.go(-1)
+            } else {
+                this.$router.push('/menu')
+                this.openMenu()
+            }
+        },
+        goToIndex() {
+            this.$router.push('/')
         },
         goToAbout() {
             this.$router.push('/about')
         }
-
-
     }
 }
 
@@ -42,10 +53,10 @@ export default {
 
 <style lang="stylus" scoped>
 .header-main
-    position fixed
-    top 0
-    left 0
-    right 0
+    // position fixed
+    // top 0
+    // left 0
+    // right 0
     z-index 10
     display flex
     flex-direction row
@@ -65,6 +76,12 @@ export default {
         .logo
             width 110px
             height 80px
+            z-index 10
+            transition opacity .25s
+            &:hover
+                cursor pointer
+                opacity 0.7
+                transition opacity .25s
         .left-controls
             display flex
             flex-direction row
@@ -72,6 +89,7 @@ export default {
             justify-content space-between
 
         #burger {
+            z-index 10
             margin-left 30px
             width: 30px;
             height: 25px;
@@ -122,11 +140,14 @@ export default {
             -moz-transform: rotate(135deg);
             -o-transform: rotate(135deg);
             transform: rotate(135deg);
+            background white
+
         }
 
         #burger.open span:nth-child(2) {
             opacity: 0;
             left: -30px;
+
         }
 
         #burger.open span:nth-child(3) {
@@ -135,7 +156,6 @@ export default {
             -moz-transform: rotate(-135deg);
             -o-transform: rotate(-135deg);
             transform: rotate(-135deg);
+            background white
         }
-
-
 </style>    

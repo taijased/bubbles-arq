@@ -1,0 +1,1 @@
+export const UPDATE_MENU = state => state.menuStatus = !state.menuStatus

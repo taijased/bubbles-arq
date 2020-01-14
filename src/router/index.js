@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 const Index = () => import('../views/Index.vue')
 const Main = () => import('../views/index/Main.vue')
 const About = () => import('../views/index/About.vue')
+const Menu = () => import('../views/index/Menu.vue')
 
 
 const Error404 = () => import('../views/Error404.vue')
@@ -26,6 +27,10 @@ const routes = [
       {
         path: '/about',
         component: About
+      },
+      {
+        path: '/menu',
+        component: Menu
       },
     ]
   },

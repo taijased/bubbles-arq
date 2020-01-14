@@ -17,7 +17,7 @@ $primary-color = #4737D6
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #4737D6;
-    transition: opacity .25s
+    z-index 10
     &:hover
         cursor pointer
         opacity 0.7
@@ -48,3 +48,34 @@ $primary-color = #4737D6
         cursor pointer
         box-shadow: 0px 0px 0px 0px #F83902;
         transition: box-shadow .25s
+
+
+//TRANSITION Animation
+
+.fade-enter {
+  -webkit-transform: translateY(50vh);
+    transform: translateY(-50vh);
+    opacity: 0;
+}
+.fade-enter-to {
+  -webkit-transform: translateY(20vh);
+  transform: translateY(0);
+  opacity: 1;
+}
+.fade-leave {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.fade-leave-to {
+  -webkit-transform: translateY(5vh);
+  transform: translateY(5vh);
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity .2s, transform .3s;
+}
+.fade-leave-active {
+  transition: opacity .2s, transform .3s;
+}
+

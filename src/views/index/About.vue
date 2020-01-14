@@ -13,6 +13,13 @@
         .primary-btn START A PROJECT
 
     .about__title DREAMTEAM
+    .about__second-block
+        p ПидАрас 1
+        p ПидАрас 2
+        p ПидАрас 3
+        p ПидАрас 4
+        p ПидАрас 5
+        p ПидАрас 6
     .about__title Partners
     .about__third-block
         img(src="../../assets/img/mincult.svg", alt="mincult")
@@ -52,19 +59,34 @@
         .primary-btn START A PROJECT
         .about-llc © 2020 ARQ, LLC <br/> ALL RIGHTS RESERVED
 
-
-
-    
-
-
 </template>
 
 <script>
+import { mapGetters, mapActions} from 'vuex';
 
 
 export default {
-  
-
+    computed: {
+        ...mapGetters({
+            getMenuStatus: "header/getMenuStatus",
+        }),
+    },
+    methods: {
+        ...mapActions({
+            openMenu: "header/openMenu",
+        }),
+        goToAbout() {
+            this.$router.push('/about')
+        },
+    },
+    created() {
+        this.$nextTick(() => {
+            document.body.style.overflow = "visible"
+            if (this.getMenuStatus) {
+                this.openMenu()
+            }
+        })
+    }
 }
 
 
@@ -81,9 +103,7 @@ export default {
     flex-direction column
     justify-content flex-start
     align-items center
-    padding-top 20px
     .about__title
-        margin-top 80px
         margin-bottom 50px
         font-family: 'TT Norms Medium';
         font-style: normal;
@@ -98,6 +118,7 @@ export default {
         display flex
         flex-direction row
         align-items flex-end
+        margin-bottom 80px
         .first-block__left
             width 600px
             font-family: 'TT Norms Medium'; 
@@ -110,11 +131,28 @@ export default {
                 color #4737D6
             p
                 margin-bottom 0px
+
+    .about__second-block
+        width 100%
+        display flex
+        flex-direction row
+        justify-content space-around
+        align-items center
+        font-family: 'TT Norms Medium';     
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 44px;
+        color: #F83902;
+
+
     .about__third-block
         width 80%
         display flex
         flex-direction row
         justify-content space-around
+        margin-bottom 80px
+
 
     .about__forth-block
         width 100%
@@ -122,6 +160,8 @@ export default {
         flex-direction row
         justify-content space-between
         align-items flex-start
+        margin-bottom 80px
+
         .left-content
             width 520px
             position relative
