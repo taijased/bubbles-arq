@@ -5,27 +5,59 @@
       .menu__controls-btn ABOUT US
       .menu__controls-btn EDITOR
       .menu__controls-btn STAY IN TOUCH
-    .menu_contacts
-      .contacts-block
-        .menu-info-block Russia, Kazan<br/>Spartakovskaya 2b, 57 office
-        .menu-info-block 
-          span Inst, Telegram<br/>
-          | Spartakovskaya 2b, 57 office
-        .menu-info-block 
-          span Mail<br/>
-          | hello@arq.su
-      .menu-info-block © 2020 ARQ, LLC<br/>ALL RIGHTS RESERVED
-      
 
 
-
+    .menu_contacts-desktop
+      .menu_contacts
+        .contacts-block
+          .menu-info-block Russia, Kazan<br/>Spartakovskaya 2b, 57 office
+          .menu-info-block 
+            span Inst, Telegram<br/>
+            | Spartakovskaya 2b, 57 office
+          .menu-info-block 
+            span Mail<br/>
+            | hello@arq.su
+        .menu-info-block © 2020 ARQ, LLC<br/>ALL RIGHTS RESERVED
+    .menu_contacts-mobile
+      .menu_contacts
+        .contacts-block
+          .menu-info-block Russia, Kazan<br/>Spartakovskaya 2b, 57 office
+          .menu-info-block 
+            span Inst, Telegram<br/>
+            | Spartakovskaya 2b, 57 office
+        .contacts-block
+          .menu-info-block © 2020 ARQ, LLC<br/>ALL RIGHTS RESERVED
+          .menu-info-block 
+            span Mail<br/>
+            | hello@arq.su
 </template>
+
+
 <script>
+
+import { mapGetters, mapActions} from 'vuex';
+
 export default {
+  computed: {
+    ...mapGetters({
+      getMenuStatus: "header/getMenuStatus",
+    }),
+  },
+  methods: {
+    ...mapActions({
+      openMenu: "header/openMenu",
+    }),
+  },
   created() {
     this.$nextTick(() => {
+      if (!this.getMenuStatus) {
+        this.openMenu()
+      }
       document.body.style.overflow = "hidden"
     })
+  },
+  beforeDestroy() {
+    document.body.style.overflow = "visible"
   }
 }
 
@@ -47,13 +79,19 @@ export default {
   z-index 5
   background: #4737D6;
   padding 36px 5vw;
-
   .menu__controls
     width 100%
     display flex
     flex-direction column
-    justify-content flex-end
-    align-items flex-end
+
+    @media screen and (max-width: 1000px) 
+      justify-content center
+      align-items center
+    @media screen and (min-width: 1000px) 
+      justify-content flex-end
+      align-items flex-end
+
+
     .menu__controls-btn
       font-family 'TT Norms Medium'
       font-style: normal;
@@ -64,6 +102,14 @@ export default {
       text-transform: uppercase;
       color: #FFFFFF;
       margin 50px 0;
+      @media screen and (max-width: 1000px) 
+        font-size: 36px;
+        line-height: 44px;
+        margin 25px 0;
+
+      @media screen and (min-width: 1000px) 
+        font-size: 48px;
+        margin 50px 0;
 
 
   .menu_contacts
@@ -92,6 +138,31 @@ export default {
         font-weight: normal;
         font-size: 14px;
         line-height: 17px;
+      
+  @media screen and (max-width: 1000px) 
+    .menu_contacts-mobile
+      width 100%
+      .menu_contacts
+        width @width
+        flex-direction column
+        justify-content space-between
+        .contacts-block
+          width @width
+          &:first-child
+            margin-bottom 14px
+          .menu-info-block 
+            margin-right 0px
+            &:nth-child(even)
+              text-align right
+    .menu_contacts-desktop
+      display none
+
+  @media screen and (min-width: 1000px) 
+    .menu_contacts-desktop
+      width 100%
+      display flex
+    .menu_contacts-mobile
+      display none
 
         
 </style>

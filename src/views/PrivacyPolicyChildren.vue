@@ -19,8 +19,10 @@ import HeaderEmpty from '../components/HeaderEmpty';
 export default {
     components: {
         HeaderEmpty
+    },
+    created() {
+        document.body.style.overflow = "hidvisibleden"
     }
-
 }
 </script>
 

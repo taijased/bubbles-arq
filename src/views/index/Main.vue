@@ -35,6 +35,9 @@ export default {
         this.openMenu()
       }
     })
+  },
+  beforeDestroy() {
+    document.body.style.overflow = "visible"
   }
 }
 

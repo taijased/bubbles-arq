@@ -81,7 +81,6 @@ export default {
     },
     created() {
         this.$nextTick(() => {
-            document.body.style.overflow = "visible"
             if (this.getMenuStatus) {
                 this.openMenu()
             }
