@@ -30,7 +30,6 @@ export default {
     .privacy-title
         margin-bottom 20px
         font-family 'TT Norms Medium'
-        font-family: TT Norms;
         font-style: normal;
         font-weight: 500;
         font-size: 32px;

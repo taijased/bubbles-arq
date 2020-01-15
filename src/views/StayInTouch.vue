@@ -1,12 +1,7 @@
 <template lang="pug">
-  .menu
-    div
-    .menu__controls
-      .menu__controls-btn ABOUT US
-      .menu__controls-btn EDITOR
-      .menu__controls-btn STAY IN TOUCH
-
-      
+    .stay-in-touch
+        .menu__controls
+        .menu__controls-btn ABOUT US
 
 </template>
 <script>
@@ -37,5 +32,4 @@ export default {
   background: #4737D6;
   padding 36px 5vw;
 
-        
 </style>

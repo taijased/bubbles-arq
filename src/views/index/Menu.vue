@@ -17,6 +17,8 @@
       .menu-info-block © 2020 ARQ, LLC<br/>ALL RIGHTS RESERVED
       
 
+
+
 </template>
 <script>
 export default {

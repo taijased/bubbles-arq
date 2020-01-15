@@ -3,9 +3,9 @@
         .navigation
             img.logo(v-if="!getMenuStatus", @click="goToIndex()", src="../assets/arq-logo.svg")
             img.logo(v-else, @click="goToIndex()", src="../assets/arq-logo_white.svg")
-            .primary-link(v-if="!getMenuStatus", @click="goToAbout()", style="margin-left: 8.5vw;") About us
+            .primary-link.center-fix(v-if="!getMenuStatus", @click="goToAbout()") About us
             .left-controls
-                .primary-link(v-if="!getMenuStatus") Want an awesome project?
+                .primary-link.mobile-version(v-if="!getMenuStatus") Want an awesome project?
                 #burger(@click="actionWithBurger()", :class="{ 'open': getMenuStatus }")
                     span
                     span
@@ -82,11 +82,24 @@ export default {
                 cursor pointer
                 opacity 0.7
                 transition opacity .25s
+        .center-fix
+            @media screen and (min-width: 1000px) 
+                margin-left: 8.5vw;
+            @media screen and (max-width: 1000px) 
+                margin: 0;
+
         .left-controls
             display flex
             flex-direction row
             align-items center
             justify-content space-between
+            @media screen and (min-width: 1000px) 
+                .mobile-version
+                    display block
+            @media screen and (max-width: 1000px) 
+                .mobile-version
+                    display none
+
 
         #burger {
             z-index 10
@@ -141,13 +154,11 @@ export default {
             -o-transform: rotate(135deg);
             transform: rotate(135deg);
             background white
-
         }
 
         #burger.open span:nth-child(2) {
             opacity: 0;
             left: -30px;
-
         }
 
         #burger.open span:nth-child(3) {
