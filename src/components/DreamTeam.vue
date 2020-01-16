@@ -16,6 +16,42 @@
                     .photo-developer iOS/Front-end  <br/>Software Engineer
                 .blue
                 .red
+
+                //- .dreamteam-desktop
+            .dreamteam__person.dreamteam-desktop
+                .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${3}.jpg`)})`}")
+                    .photo-name Denis
+                    .photo-developer Android/Unity <br/>Software Engineer 
+                .blue
+                .red
+            .dreamteam__person.dreamteam-desktop
+                .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${4}.jpg`)})`}")
+                    .photo-name Anton
+                    .photo-developer 3D Generalist
+                .blue
+                .red
+        .dreamteam__row
+            .dreamteam__person
+                .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${6}.jpg`)})`}")
+                    .photo-name Alexander
+                    .photo-developer 
+                        | CTO/Back-End<br/>Software Engineer
+                .blue
+                .red
+            .dreamteam__person
+                .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${5}.jpg`)})`}")
+                    .photo-name Tim
+                    .photo-developer 
+                        | CEO/Art-director
+                .blue
+                .red
+            .dreamteam__person
+                .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${7}.jpg`)})`}")
+                    .photo-name Mikhail
+                    .photo-developer Project Manager
+                .blue
+                .red
+        .dreamteam__row.dreamteam-mobile
             .dreamteam__person
                 .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${3}.jpg`)})`}")
                     .photo-name Denis
@@ -28,27 +64,8 @@
                     .photo-developer 3D Generalist
                 .blue
                 .red
-        .dreamteam__row
-            .dreamteam__person
-                .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${5}.jpg`)})`}")
-                    .photo-name Tim
-                    .photo-developer 
-                        | CEO/Art-director
-                .blue
-                .red
-            .dreamteam__person
-                .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${6}.jpg`)})`}")
-                    .photo-name Alexander
-                    .photo-developer 
-                        | CTO/Back-End<br/>Software Engineer
-                .blue
-                .red
-            .dreamteam__person
-                .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${7}.jpg`)})`}")
-                    .photo-name Mikhail
-                    .photo-developer Project Manager
-                .blue
-                .red
+
+
 
 
 </template>
@@ -68,13 +85,24 @@ export default {
 
 <style lang="stylus">
 
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 
+  .card {
+    flex: 0 0 auto;
+  }
+}
 .dreamteam
     display flex
     flex-direction column
     align-items center
     justify-content center
     margin-bottom 20px
+
+
+  
 
 
     .dreamteam__person
@@ -84,6 +112,21 @@ export default {
         margin-right 35px
         transition all .3s
         &:hover 
+            z-index 20 !important
+            transform scale(1.2)
+            transition all .3s
+            .photo
+                mix-blend-mode: lighten;
+                cursor pointer
+                box-shadow: 0px 0px 0px 0px #F83902;
+                transition all .3s
+                .photo-name
+                    display block
+                    transition display .3s
+                .photo-developer
+                    display block
+                    transition display .3s
+        &:active 
             z-index 20 !important
             transform scale(1.2)
             transition all .3s
@@ -150,6 +193,12 @@ export default {
                 font-size: 20px;
                 color: #FFFFFF;
 
+    
+    
+    
+    
+    
+    
     .dreamteam__row
         display flex
         flex-direction row
@@ -181,5 +230,65 @@ export default {
                 &:nth-child(3)
                     bottom 80px  
                     z-index 16
- 
+    @media screen and (max-width: 1000px) 
+        margin-bottom 450px
+
+        .dreamteam-mobile
+            display flex
+            margin-top -100px
+        .dreamteam-desktop
+            display none
+
+        .dreamteam__person
+            width 100px
+            height 126px
+            margin 0
+
+        .dreamteam__row
+            width 100%
+            margin 0
+            margin-top 50px
+            justify-content space-between
+            &:nth-child(1)
+                .dreamteam__person
+                    &:nth-child(1)
+                        left -30px
+                        bottom 40px
+                        z-index 11
+                    &:nth-child(2)
+                        left -70px
+                        bottom -50px
+                        z-index 12
+            &:nth-child(2)
+                .dreamteam__person
+                    &:nth-child(1)
+                        z-index 13
+                        left -80px
+                        bottom 20px
+                    &:nth-child(2)
+                        left -60px
+                        bottom -100px
+                        z-index 14
+                    &:nth-child(3)
+                        left 0
+                        bottom -150px
+                        z-index 15
+            &:nth-child(3)
+                .dreamteam__person
+                    &:nth-child(1)
+                        left -60px
+                        bottom -90px
+                        z-index 16
+                    &:nth-child(2)
+                        left -90px
+                        bottom -180px
+                        z-index 17
+
+    @media screen and (min-width: 1000px) 
+        .dreamteam-mobile
+            display none 
+        .dreamteam-desktop
+            display block
+
+
 </style>
