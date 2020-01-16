@@ -2,7 +2,8 @@
     .header-main
         .navigation
             img.logo(v-if="!getMenuStatus", @click="goToIndex()", src="../assets/arq-logo.svg")
-            img.logo(v-else, @click="goToIndex()", src="../assets/arq-logo_white.svg")
+            img.logo(v-else-if="getContactsStatus", @click="goToIndex()", src="../assets/arq-logo_white.svg")
+            div(v-else)
             .primary-link.center-fix(v-if="!getMenuStatus", @click="goToAbout()") About us
             .left-controls
                 .primary-link.mobile-version(v-if="!getMenuStatus") Want an awesome project?
@@ -24,6 +25,7 @@ export default {
     computed: {
         ...mapGetters({
             getMenuStatus: "header/getMenuStatus",
+            getContactsStatus: "header/getContactsStatus",
         }),
     },
     methods: {

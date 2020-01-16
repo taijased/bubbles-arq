@@ -49,6 +49,32 @@ $primary-color = #4737D6
         box-shadow: 0px 0px 0px 0px #F83902;
         transition: box-shadow .25s
 
+.white-btn 
+    z-index 10
+    width 240px
+    height 50px
+    background: #fff
+    display flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    box-shadow: -8px 8px 0px 0px #F83902;
+    font-family: 'TT Norms Medium';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-align: center;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #4737D6;
+    transition: box-shadow .25s
+    &:hover 
+        cursor pointer
+        box-shadow: 0px 0px 0px 0px #F83902;
+        transition: box-shadow .25s
+
 
 //TRANSITION Animation
 
@@ -79,3 +105,32 @@ $primary-color = #4737D6
   transition: opacity .2s, transform .3s;
 }
 
+
+
+
+.fade-h-enter {
+  -webkit-transform: translateX(50vh);
+    transform: translateX(-50vh);
+    opacity: 0;
+}
+.fade-h-enter-to {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+.fade-h-leave {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+.fade-h-leave-to {
+  -webkit-transform: translateX(50vh);
+  transform: translateX(-50vh);
+  opacity: 0;
+}
+.fade-h-enter-active {
+  transition: opacity .2s, transform .3s;
+}
+.fade-h-leave-active {
+  transition: opacity .2s, transform .3s;
+}

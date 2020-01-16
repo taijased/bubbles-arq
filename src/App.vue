@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    ParticleBackground
+    //- ParticleBackground
     router-view
 </template>
 

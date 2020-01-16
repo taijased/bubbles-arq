@@ -1,33 +1,29 @@
 <template lang="pug">
   .menu
     div
-    .menu__controls
-      .menu__controls-btn ABOUT US
-      .menu__controls-btn EDITOR
-      .menu__controls-btn STAY IN TOUCH
-
-
-    .menu_contacts-desktop
+    transition(name="fade-h", mode="out-in", :css="true")
+      router-view
+    .menu_contacts-desktop(v-if="getContactsStatus")
       .menu_contacts
         .contacts-block
           .menu-info-block Russia, Kazan<br/>Spartakovskaya 2b, 57 office
           .menu-info-block 
             span Inst, Telegram<br/>
-            | Spartakovskaya 2b, 57 office
+            | @arq_family
           .menu-info-block 
             span Mail<br/>
             | hello@arq.su
         .menu-info-block © 2020 ARQ, LLC<br/>ALL RIGHTS RESERVED
-    .menu_contacts-mobile
+    .menu_contacts-mobile(v-if="getContactsStatus")
       .menu_contacts
         .contacts-block
           .menu-info-block Russia, Kazan<br/>Spartakovskaya 2b, 57 office
           .menu-info-block 
             span Inst, Telegram<br/>
-            | Spartakovskaya 2b, 57 office
+            | @arq_family
         .contacts-block
           .menu-info-block © 2020 ARQ, LLC<br/>ALL RIGHTS RESERVED
-          .menu-info-block 
+          .menu-info-block  
             span Mail<br/>
             | hello@arq.su
 </template>
@@ -38,14 +34,17 @@
 import { mapGetters, mapActions} from 'vuex';
 
 export default {
+
   computed: {
     ...mapGetters({
       getMenuStatus: "header/getMenuStatus",
-    }),
+      getContactsStatus: "header/getContactsStatus",
+    })
   },
   methods: {
     ...mapActions({
       openMenu: "header/openMenu",
+      updateBottomContacts: "header/updateBottomContacts",
     }),
   },
   created() {
@@ -66,7 +65,7 @@ export default {
 <style lang="stylus" scoped>
 
 .menu
-  position absolute
+  position fixed
   top 0
   left 0
   right 0
@@ -75,42 +74,10 @@ export default {
   flex-direction column
   justify-content space-between
   align-items center
-  overflow hidden
+  overflow hidden !important
   z-index 5
   background: #4737D6;
   padding 36px 5vw;
-  .menu__controls
-    width 100%
-    display flex
-    flex-direction column
-
-    @media screen and (max-width: 1000px) 
-      justify-content center
-      align-items center
-    @media screen and (min-width: 1000px) 
-      justify-content flex-end
-      align-items flex-end
-
-
-    .menu__controls-btn
-      font-family 'TT Norms Medium'
-      font-style: normal;
-      font-weight: bold;
-      font-size: 48px;
-      line-height: 59px;
-      text-align: right;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      margin 50px 0;
-      @media screen and (max-width: 1000px) 
-        font-size: 36px;
-        line-height: 44px;
-        margin 25px 0;
-
-      @media screen and (min-width: 1000px) 
-        font-size: 48px;
-        margin 50px 0;
-
 
   .menu_contacts
     width 100%
@@ -162,7 +129,5 @@ export default {
       width 100%
       display flex
     .menu_contacts-mobile
-      display none
-
-        
+      display none   
 </style>

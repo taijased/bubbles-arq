@@ -1,3 +1,4 @@
 export default {
-  menuStatus: false
+  menuStatus: false,
+  contactsStatus: true
 }
