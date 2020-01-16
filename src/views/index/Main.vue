@@ -82,7 +82,7 @@ export default {
       justify-content space-between
       align-items center
       img 
-        width 60%
+        width 55%
     .main__content-mobile
       display none
   @media screen and (max-width: 1000px) 

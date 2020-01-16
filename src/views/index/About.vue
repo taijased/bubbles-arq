@@ -14,12 +14,7 @@
 
     .about__title DREAMTEAM
     .about__second-block
-        p ПидАрас 1
-        p ПидАрас 2
-        p ПидАрас 3
-        p ПидАрас 4
-        p ПидАрас 5
-        p ПидАрас 6
+       DreamTeam
     .about__title Partners
     .about__third-block
         img(src="../../assets/img/mincult.svg", alt="mincult")
@@ -63,7 +58,7 @@
 
 <script>
 import { mapGetters, mapActions} from 'vuex';
-
+import DreamTeam from '../../components/DreamTeam';
 
 export default {
     computed: {
@@ -90,6 +85,9 @@ export default {
     beforeDestroy() {
         document.body.style.overflow = "hidden"
 
+    },
+    components: {
+        DreamTeam
     }
 }
 
@@ -151,16 +149,9 @@ export default {
     .about__second-block
         width 100%
         display flex
-        flex-direction row
-        justify-content space-around
+        flex-direction column
         align-items center
-        font-family: 'TT Norms Medium';     
-        font-style: normal;
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 44px;
-        color: #F83902;
-
+        justify-content center
 
     .about__third-block
         margin-top -20px
