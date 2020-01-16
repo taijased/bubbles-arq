@@ -44,7 +44,7 @@
             .question-content 
                 | Have a questions? <br/>
                 span Stay in touch
-
+            .macbook-small
             .primary-btn Try it for free
         img(src="../../assets/img/withphone.png", alt="withphone")
 
@@ -81,10 +81,15 @@ export default {
     },
     created() {
         this.$nextTick(() => {
+            document.body.style.overflow = "visible"
             if (this.getMenuStatus) {
                 this.openMenu()
             }
         })
+    },
+    beforeDestroy() {
+        document.body.style.overflow = "hidden"
+
     }
 }
 
@@ -114,12 +119,16 @@ export default {
         text-transform: uppercase;
         color: #4737D6;
     .about__first-block
+        width 80%
         display flex
-        flex-direction row
+        flex-flow row wrap
         align-items flex-end
+        justify-content space-around
         margin-bottom 80px
         .first-block__left
             width 600px
+              
+
             font-family: 'TT Norms Medium'; 
             font-style: normal;
             font-weight: 500;
@@ -130,6 +139,14 @@ export default {
                 color #4737D6
             p
                 margin-bottom 0px
+    @media screen and (max-width: 1000px) 
+        .about__first-block
+            width 100%
+            justify-content center
+            .first-block__left
+                width 80%
+                margin-bottom 20px
+
 
     .about__second-block
         width 100%
@@ -146,11 +163,14 @@ export default {
 
 
     .about__third-block
+        margin-top -20px
         width 80%
         display flex
-        flex-direction row
+        flex-flow row wrap
         justify-content space-around
         margin-bottom 80px
+        img 
+            margin 20px 10px
 
 
     .about__forth-block
@@ -165,17 +185,18 @@ export default {
             width 520px
             position relative
             left 20vw
-
-
             font-family: 'TT Norms Medium'; 
             font-style: normal;
             font-weight: 500;
             font-size: 36px;
             line-height: 44px;
             color: #F83902;
+            .macbook-small
+                display none
             span 
                 color #4737D6
             .question-content 
+                width 100%
                 font-family: 'TT Norms Medium'; 
                 font-style: normal;
                 font-weight: 500;
@@ -196,9 +217,38 @@ export default {
             right 0
             top 30px
             width 45%
+    @media screen and (max-width: 1000px) 
+        .about__forth-block
+            justify-content center
+
+            .left-content
+                width 80%
+                left 0
+                display flex
+                flex-direction column
+                justify-content center
+                align-items center
+                .macbook-small
+                    display block
+                    width 100%
+                    height 210px
+                    background url('../../assets/img/mb_mobile.jpg') no-repeat center
+                    margin-bottom 20px
+                    z-index -1
+                p 
+                    width 100%
+                    text-align left
+                .question-content 
+                    display flex
+                    flex-direction column
+                    justify-content center
+                    align-items center
+            img
+                display none
+
 
     .about__fifeth-block
-        padding 50px 0
+        padding-bottom 50px
         display flex
         flex-direction column
         justify-content center

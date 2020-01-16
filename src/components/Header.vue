@@ -85,8 +85,11 @@ export default {
                 opacity 0.7
                 transition opacity .25s
         .center-fix
+            position relative
+            left 0
+            right 0
             @media screen and (min-width: 1000px) 
-                margin-left: 8.5vw;
+                margin-left: 150px;
             @media screen and (max-width: 1000px) 
                 margin: 0;
 
