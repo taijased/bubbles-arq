@@ -65,6 +65,7 @@ export default {
 <style lang="stylus" scoped>
 
 .menu
+  z-index 10
   position fixed
   top 0
   left 0
