@@ -103,13 +103,9 @@ export default {
 <style lang="stylus" scoped>
 
 .about
-    // overflow hidden
+    overflow hidden
     z-index 10
     width 100%
-    // display flex
-    // flex-direction column
-    // justify-content flex-start
-    // align-items center
     .about__title
         margin-bottom 50px
         font-family: 'TT Norms Medium';
@@ -122,7 +118,7 @@ export default {
         text-transform: uppercase;
         color: #4737D6;
     .about__first-block
-        width 80%
+        width 100%
         display flex
         flex-flow row wrap
         align-items flex-end
@@ -160,11 +156,14 @@ export default {
         justify-content center
 
     .about__third-block
+        width 100%
         margin-top -20px
-        width 80%
+        @media screen and (max-width: 1000px) 
+            padding 0
         display flex
         flex-flow row wrap
         justify-content space-around
+        align-items center
         margin-bottom 80px
         img 
             margin 20px 10px
@@ -219,6 +218,7 @@ export default {
             justify-content center
 
             .left-content
+
                 width 80%
                 left 0
                 display flex

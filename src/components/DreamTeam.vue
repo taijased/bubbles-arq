@@ -170,6 +170,7 @@ export default {
         &:nth-child(1)
             .dreamteam__person
                 &:nth-child(1)
+                    left -50px
                     z-index 11
                 &:nth-child(2)
                     bottom -80px
@@ -185,7 +186,7 @@ export default {
         &:nth-child(2)
             .dreamteam__person
                 &:nth-child(1)
-                    left -40px
+                    // left -20px
                     bottom 119px  
                     z-index 12
                 &:nth-child(2)
@@ -194,6 +195,5 @@ export default {
                 &:nth-child(3)
                     bottom 80px  
                     z-index 16
-
 
 </style>

@@ -1,45 +1,45 @@
 <template lang="pug">
     section#dream-team(@scroll="handleScroll")
-        .dreamteam__person(:class="{'active': elementCard[0]}")
+        .dreamteam-mobile__person(:class="{'active': elementCard[0]}")
             .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${1}.jpg`)})`}")
                 .photo-name Alexey
                 .photo-developer 
                     | Unity Software <br/>Engineer
             .blue
             .red
-        .dreamteam__person(:class="{'active': elementCard[1]}")
+        .dreamteam-mobile__person(:class="{'active': elementCard[1]}")
             .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${2}.jpg`)})`}")
                 .photo-name Maxim
                 .photo-developer iOS/Front-end  <br/>Software Engineer
             .blue
             .red
-        .dreamteam__person(:class="{'active': elementCard[2]}")
+        .dreamteam-mobile__person(:class="{'active': elementCard[2]}")
             .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${3}.jpg`)})`}")
                 .photo-name Denis
                 .photo-developer Android/Unity <br/>Software Engineer 
             .blue
             .red
-        .dreamteam__person(:class="{'active': elementCard[3]}")
+        .dreamteam-mobile__person(:class="{'active': elementCard[3]}")
             .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${4}.jpg`)})`}")
                 .photo-name Anton
                 .photo-developer 3D Generalist
             .blue
             .red
-        .dreamteam__person(:class="{'active': elementCard[4]}")
+        .dreamteam-mobile__person(:class="{'active': elementCard[4]}")
             .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${6}.jpg`)})`}")
                 .photo-name Alexander
                 .photo-developer 
                     | CTO/Back-End<br/>Software Engineer
             .blue
             .red
-        .dreamteam__person(:class="{'active': elementCard[5]}")
+        .dreamteam-mobile__person(:class="{'active': elementCard[5]}")
             .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${5}.jpg`)})`}")
                 .photo-name Tim
                 .photo-developer 
                     | CEO/Art-director
             .blue
             .red
-        .dreamteam__person(:class="{'active': elementCard[6]}")
+        .dreamteam-mobile__person(:class="{'active': elementCard[6]}")
             .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${7}.jpg`)})`}")
                 .photo-name Mikhail
                 .photo-developer Project Manager
@@ -121,6 +121,7 @@ export default {
 
 
 #dream-team
+    height 400px
     overflow-x: scroll !important;
     overflow-y: hidden !important;
     white-space: nowrap;
@@ -129,7 +130,7 @@ export default {
     padding-bottom 240px
 
 
-    .dreamteam__person
+    .dreamteam-mobile__person
         position relative
         display: inline-block;
         width 230px
@@ -213,7 +214,7 @@ export default {
                 color: #FFFFFF;
 .active
     z-index 20 !important
-    transform scale(1.2) !important
+    transform scale(1.3) !important
     transition all .3s !important
     .photo
         mix-blend-mode: lighten !important
