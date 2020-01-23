@@ -2,14 +2,14 @@
   .main
     .main__content-desktop
       .main__title Augmented Reality <br/> is easier than you think
-      .primary-btn Try editor for free
+      .primary-btn(@click="goToEditor()")  Try editor for free
       img(src="../../assets/img/mb.jpg", alt="macbook")
 
     .main__content-mobile
       .main__title Augmented <br/> Reality <br/>is easier than <br/>you think
       img(src="../../assets/img/mb_mobile.jpg", alt="mb_mobile")
       .primary-btn Try editor for free
-      .primary-link Want an awesome project?
+      .primary-link(@click="goToEditor()") Want an awesome project?
 
 </template>
 
@@ -27,6 +27,12 @@ export default {
     ...mapActions({
       openMenu: "header/openMenu",
     }),
+    goToAbout() {
+      this.$router.push('/about')
+    },
+    goToEditor() {
+      window.open("https://editor.arq.su", "_blank");
+    },
   },
   created() {
     this.$nextTick(() => {
