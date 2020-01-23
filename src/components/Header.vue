@@ -6,7 +6,7 @@
             div(v-else)
             .primary-link.center-fix(v-if="!getMenuStatus", @click="goToAbout()") About us
             .left-controls
-                .primary-link.mobile-version(v-if="!getMenuStatus") Want an awesome project?
+                .primary-link.mobile-version(v-if="!getMenuStatus", @click="goToEditor()") Want an awesome project?
                 #burger(@click="actionWithBurger()", :class="{ 'open': getMenuStatus }")
                     span
                     span
@@ -39,6 +39,9 @@ export default {
                 this.$router.push('/menu')
                 this.openMenu()
             }
+        },
+        goToEditor() {
+          window.open("https://editor.arq.su", "_blank");
         },
         goToIndex() {
             this.$router.push('/')

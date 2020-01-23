@@ -6,26 +6,28 @@
     .menu_contacts-desktop(v-if="getContactsStatus")
       .menu_contacts
         .contacts-block
-          .menu-info-block Russia, Kazan<br/>Spartakovskaya 2b, 57 office
-          .menu-info-block 
+          .menu-info-block(@click="openMap()") Russia, Kazan<br/>Spartakovskaya 2b, 57 office
+          .menu-info-block(@click="openTelegram()")
             span Inst, Telegram<br/>
             | @arq_family
-          .menu-info-block 
-            span Mail<br/>
-            | hello@arq.su
+          a(href="mailto:hello@arq.su")
+            .menu-info-block 
+              span Mail<br/>
+              | hello@arq.su
         .menu-info-block © 2020 ARQ, LLC<br/>ALL RIGHTS RESERVED
     .menu_contacts-mobile(v-if="getContactsStatus")
       .menu_contacts
         .contacts-block
-          .menu-info-block Russia, Kazan<br/>Spartakovskaya 2b, 57 office
-          .menu-info-block 
+          .menu-info-block(@click="openMap()") Russia, Kazan<br/>Spartakovskaya 2b, 57 office
+          .menu-info-block(@click="openTelegram()")
             span Inst, Telegram<br/>
             | @arq_family
         .contacts-block
           .menu-info-block © 2020 ARQ, LLC<br/>ALL RIGHTS RESERVED
-          .menu-info-block  
-            span Mail<br/>
-            | hello@arq.su
+          a(href="mailto:hello@arq.su")
+            .menu-info-block 
+              span Mail<br/>
+              | hello@arq.su
 </template>
 
 
@@ -46,6 +48,12 @@ export default {
       openMenu: "header/openMenu",
       updateBottomContacts: "header/updateBottomContacts",
     }),
+    openMap() {
+      window.open('https://yandex.ru/maps/43/kazan/search/%D0%A1%D0%BF%D0%B0%D1%80%D1%82%D0%B0%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%202%D0%B1/?ll=49.128503%2C55.779277&sll=49.128503%2C55.779277&sspn=0.013789%2C0.004638&z=17', '_blank')
+    },
+    openTelegram() {
+      window.open(' https://t.me/arq_family', '_blank')
+    },
   },
   created() {
     this.$nextTick(() => {

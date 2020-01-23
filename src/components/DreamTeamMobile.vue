@@ -69,7 +69,7 @@ export default {
         handleScroll (event) {
             const element = document.getElementById('dream-team');
 
-            console.log(element.scrollLeft);
+            // console.log(element.scrollLeft);
             if (0 < element.scrollLeft && element.scrollLeft < 50) {
                 this.resetElements()
                 this.elementCard[0] = true

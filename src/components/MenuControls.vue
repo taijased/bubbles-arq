@@ -1,9 +1,9 @@
 <template lang="pug">
     .menu__controls
-      .menu__controls-btn 
+      .menu__controls-btn(@click="goAbout()")
         | ABOUT US
         div
-      .menu__controls-btn 
+      .menu__controls-btn(@click="goToEditor()")
         | EDITOR
         div
       .menu__controls-btn(@click="goToStayInTouch()")
@@ -17,7 +17,15 @@ export default {
     methods: {
         goToStayInTouch() {
             this.$router.push('/stayintouch')
-        }
+        },
+        goAbout() {
+            this.$router.push('/about')
+        },
+        goToEditor() {
+          window.open("https://editor.arq.su", "_blank");
+        },
+
+
     }
  
 }

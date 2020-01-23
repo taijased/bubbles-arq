@@ -10,7 +10,7 @@
                 | We love to be an integral part of the creative process, and we fond of doing incredible things using augmented reality.
                 span  With all our work, we hope to empower users
                 | to bring something different to their daily lives.
-        .primary-btn START A PROJECT
+        .primary-btn(@click="goToEditor()") START A PROJECT
 
     .about__title DREAMTEAM
 
@@ -40,9 +40,9 @@
                 span  to view your projects.
             .question-content 
                 | Have a questions? <br/>
-                span Stay in touch
+                span(@click="goStayintouch()") Stay in touch
             .macbook-small
-            .primary-btn Try it for free
+            .primary-btn(@click="goToEditor()") Try it for free
         img(src="../../assets/img/withphone.png", alt="withphone")
 
     .about__title ARQ FAMILY
@@ -53,7 +53,7 @@
         .content-second Click this button, don't be shy
 
 
-        .primary-btn START A PROJECT
+        .primary-btn(@click="goToEditor()") START A PROJECT
         .about-llc © 2020 ARQ, LLC <br/> ALL RIGHTS RESERVED
 
 </template>
@@ -76,6 +76,12 @@ export default {
         goToAbout() {
             this.$router.push('/about')
         },
+        goToEditor() {
+          window.open("https://editor.arq.su", "_blank");
+        },
+        goStayintouch() {
+            this.$router.push('/stayintouch')
+        }
     },
     created() {
         this.$nextTick(() => {
@@ -260,6 +266,8 @@ export default {
             color: #F83902;
         span 
             color: #4737D6;
+            &:hover
+                cursor pointer
 
         .content-second 
             font-family: 'TT Norms Medium'; 
