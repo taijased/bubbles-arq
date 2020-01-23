@@ -14,7 +14,8 @@
 
     .about__title DREAMTEAM
     .about__second-block
-       DreamTeam
+       DreamTeam.dreamteam-desktop
+       DreamTeamMobile.dreamteam-mobile
     .about__title Partners
     .about__third-block
         img(src="../../assets/img/mincult.svg", alt="mincult")
@@ -59,6 +60,7 @@
 <script>
 import { mapGetters, mapActions} from 'vuex';
 import DreamTeam from '../../components/DreamTeam';
+import DreamTeamMobile from '../../components/DreamTeamMobile';
 
 export default {
     computed: {
@@ -87,7 +89,8 @@ export default {
 
     },
     components: {
-        DreamTeam
+        DreamTeam,
+        DreamTeamMobile
     }
 }
 
@@ -99,6 +102,8 @@ export default {
 <style lang="stylus" scoped>
 
 .about
+    overflow hidden
+    
     z-index 10
     width 100%
     display flex
@@ -276,5 +281,16 @@ export default {
         line-height: 17px;
         text-align: center;
         color: #000000;
+@media screen and (max-width: 1000px) 
 
+    .dreamteam-mobile
+        display: block;
+    .dreamteam-desktop
+        display none
+
+@media screen and (min-width: 1000px) 
+    .dreamteam-mobile
+        display none 
+    .dreamteam-desktop
+        display block
 </style>

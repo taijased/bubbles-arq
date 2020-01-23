@@ -70,7 +70,6 @@ export default {
                 const idBoard = "5da06c29c9fb3747328efc66"
                 const idList = "5da06c347ffb4d2ed8ffad98"
                 let description = `Имя: ${this.name}\n Телефон: ${this.phone}\n E-mail: ${this.email}\n Question: ${this.question}`;
-                
                 let data = {
                     "name":`${this.name}`,
                     "desc": description,
@@ -99,7 +98,6 @@ export default {
                 this.updateBottomContacts()
             }   
             // document.body.style.overflow = "vhiddenz"
-
         })
     },
     beforeDestroy() {

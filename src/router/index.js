@@ -13,6 +13,12 @@ const FormControls = () => import('../components/FormControls.vue')
 
 
 
+const DreamTeamMobile = () => import('../components/DreamTeamMobile.vue')
+
+
+
+
+
 
 
 
@@ -52,6 +58,10 @@ const routes = [
         ]
       },
     ]
+  },
+  {
+    path: '/test',
+    component: DreamTeamMobile
   },
   {
     path: '/privacypolicy',
