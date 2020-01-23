@@ -5,8 +5,7 @@
                 .photo(:style="{'background-image': `url(${require(`../assets/img/dreamteam/person-${1}.jpg`)})`}")
                     .photo-name Alexey
                     .photo-developer 
-                        | Unity Software
-                        | Engineer
+                        | Unity Software <br/>Engineer
                 .blue
                 .red
             .dreamteam__person

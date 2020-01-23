@@ -13,9 +13,10 @@
         .primary-btn START A PROJECT
 
     .about__title DREAMTEAM
+
     .about__second-block
-       DreamTeam.dreamteam-desktop
-       DreamTeamMobile.dreamteam-mobile
+        DreamTeam.dreamteam-desktop
+    DreamTeamMobile.dreamteam-mobile
     .about__title Partners
     .about__third-block
         img(src="../../assets/img/mincult.svg", alt="mincult")
@@ -102,14 +103,13 @@ export default {
 <style lang="stylus" scoped>
 
 .about
-    overflow hidden
-    
+    // overflow hidden
     z-index 10
     width 100%
-    display flex
-    flex-direction column
-    justify-content flex-start
-    align-items center
+    // display flex
+    // flex-direction column
+    // justify-content flex-start
+    // align-items center
     .about__title
         margin-bottom 50px
         font-family: 'TT Norms Medium';
@@ -152,6 +152,7 @@ export default {
 
 
     .about__second-block
+
         width 100%
         display flex
         flex-direction column

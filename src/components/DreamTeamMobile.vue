@@ -68,9 +68,8 @@ export default {
     methods: {
         handleScroll (event) {
             const element = document.getElementById('dream-team');
-            // console.log(element.scrollLeft);
 
-
+            console.log(element.scrollLeft);
             if (0 < element.scrollLeft && element.scrollLeft < 50) {
                 this.resetElements()
                 this.elementCard[0] = true
@@ -122,7 +121,6 @@ export default {
 
 
 #dream-team
-    overflow: hidden;
     overflow-x: scroll !important;
     overflow-y: hidden !important;
     white-space: nowrap;
@@ -162,38 +160,7 @@ export default {
             left -580px
             bottom -20px  
             z-index 16
-        transition all .3s
-        &:hover 
-            z-index 20 !important
-            transform scale(1.2)
-            transition all .3s
-            .photo
-                mix-blend-mode: lighten;
-                cursor pointer
-                box-shadow: 0px 0px 0px 0px #F83902;
-                transition all .3s
-                .photo-name
-                    display block
-                    transition display .3s
-                .photo-developer
-                    display block
-                    transition display .3s
-        &:active 
-            z-index 20 !important
-            transform scale(1.2)
-            transition all .3s
-            .photo
-                mix-blend-mode: lighten;
-                cursor pointer
-                box-shadow: 0px 0px 0px 0px #F83902;
-                transition all .3s
-                .photo-name
-                    display block
-                    transition display .3s
-                .photo-developer
-                    display block
-                    transition display .3s
-            
+        transition all .3s            
         .blue
             position relative
             top -(@height)
