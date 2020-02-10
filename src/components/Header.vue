@@ -6,7 +6,7 @@
             div(v-else)
             .primary-link.center-fix(v-if="!getMenuStatus", @click="goToAbout()") About us
             .left-controls
-                .primary-link.mobile-version(v-if="!getMenuStatus", @click="goToEditor()") Want an awesome project?
+                .primary-link.mobile-version(v-if="!getMenuStatus", @click="goToStayintouch()") Want an awesome project?
                 #burger(@click="actionWithBurger()", :class="{ 'open': getMenuStatus }")
                     span
                     span
@@ -40,8 +40,9 @@ export default {
                 this.openMenu()
             }
         },
-        goToEditor() {
-          window.open("https://editor.arq.su", "_blank");
+        goToStayintouch() {
+        //   window.open("https://editor.arq.su", "_blank");
+           this.$router.push('/stayintouch')
         },
         goToIndex() {
             this.$router.push('/')

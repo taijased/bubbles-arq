@@ -10,14 +10,14 @@
                 | We love to be an integral part of the creative process, and we fond of doing incredible things using augmented reality.
                 span  With all our work, we hope to empower users
                 | to bring something different to their daily lives.
-        .primary-btn(@click="goToEditor()") START A PROJECT
+        .primary-btn(@click="goStayintouch()") START A PROJECT
 
     .about__title DREAMTEAM
 
     .about__second-block
         DreamTeam.dreamteam-desktop
     DreamTeamMobile.dreamteam-mobile
-    .about__title Partners
+    .about__title Partnerss
     .about__third-block
         img(src="../../assets/img/mincult.svg", alt="mincult")
         img(src="../../assets/img/bayer.svg", alt="bayer")
@@ -53,7 +53,7 @@
         .content-second Click this button, don't be shy
 
 
-        .primary-btn(@click="goToEditor()") START A PROJECT
+        .primary-btn(@click="goStayintouch()") START A PROJECT
         .about-llc © 2020 ARQ, LLC <br/> ALL RIGHTS RESERVED
 
 </template>
@@ -213,6 +213,8 @@ export default {
                     line-height: 35px;
                     text-decoration-line: underline;
                     color: #F83902;
+                    &:hover
+                        cursor pointer
 
         img 
             position relative
