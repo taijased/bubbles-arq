@@ -51,8 +51,7 @@
             span WE ARE ARQ
             |  and we are ready to <br/>create an awesome project for you
         .content-second Click this button, don't be shy
-
-
+        
         .primary-btn(@click="goStayintouch()") START A PROJECT
         .about-llc © 2020 ARQ, LLC <br/> ALL RIGHTS RESERVED
 
