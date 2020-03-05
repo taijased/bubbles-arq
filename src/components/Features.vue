@@ -1,0 +1,95 @@
+<template lang="pug">
+
+.features
+  .features__header
+    | ARQ Viewer это ваш проводник в мир дополненной реальности
+  .features-container
+    .features-container__item
+      img(src='../assets/img/circle64-alarm.svg')
+      span Простота
+      | Никакого программирования. Просто импортируйте ваши 3D модели прямо в приложение и запускайте дополненную реальность где и когда угодно.
+    .features-container__item
+      img(src='../assets/img/circle64-share.svg')
+      span Делитесь проектами
+      | Мы понимаем, что вам нужно делиться проектами с вашими заказчиками или клиентами. Именно поэтому мы позволяем делиться проектами прямо из приложения.
+    .features-container__item
+      img(src='../assets/img/circle64-models.svg')
+      span Поддержка более 40 3D форматов
+      | Самые популярные 3D форматы уже поддерживаются. Просто подключите ваше облако или импортируйте ваши проекты прямо с устройства.
+
+
+
+</template>
+
+<style lang="stylus" scoped>
+.features
+    // background red
+    background: #14171D;
+    padding 8.88888vh 10.27777vw
+    .features__header
+        // background white
+        height 150px
+        font-size: 4.444vh;
+        max-width 30vw
+        width 100%
+        margin-bottom 55px
+    .features-container
+        width 100%
+        // background blue
+        display flex
+        flex-flow row wrap
+        justify-content space-between
+        align-items center
+        &__item
+            font-size: 2.2222vh;
+            color: gray;
+            // margin 10px
+            width 360px
+            height 217px
+            // background green
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            span
+                color: white;
+                margin-top: 2vh;
+                margin-bottom: 1.5vh;
+                font-size: 2.6666vh;
+
+
+    // .features
+    //     // height: 64.666vh;
+    //     background: #14171D;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    //     justify-content: center;
+    //     div
+    //         width: 100vw;
+    //     .features__header
+    //         margin-left: 8vw;
+    //         font-size: 4.444vh;
+    //         margin-bottom: 6vh;
+    //         max-width 34.777vw
+    //     .features-container
+
+    //         display: flex;
+    //         flex-flow: row wrap;
+    //         align-items: center;
+    //         justify-content: space-evenly;
+    //         .features-container__item
+    //             font-size: 2.2222vh;
+    //             color: gray;
+    //             max-width 300px
+    //             display: flex;
+    //             flex-direction: column;
+    //             align-items: flex-start;
+    //             justify-content: center;
+    //             span
+    //                 color: white;
+    //                 margin-top: 2vh;
+    //                 margin-bottom: 1.5vh;
+    //                 font-size: 2.6666vh;
+</style>  
+

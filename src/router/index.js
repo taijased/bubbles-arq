@@ -3,20 +3,6 @@ import VueRouter from 'vue-router'
 
 
 const Index = () => import('../views/Index.vue')
-const Main = () => import('../views/index/Main.vue')
-const About = () => import('../views/index/About.vue')
-
-
-const Menu = () => import('../views/index/Menu.vue')
-const MenuControls = () => import('../components/MenuControls.vue')
-const FormControls = () => import('../components/FormControls.vue')
-
-
-
-
-
-
-
 
 
 const Error404 = () => import('../views/Error404.vue')
@@ -30,31 +16,6 @@ const routes = [
   {
     path: '/',
     component: Index,
-    children: [
-      {
-        path: '/',
-        component: Main
-      },
-      {
-        path: '/about',
-        component: About
-      },
-      {
-        path: '/menu',
-        component: Menu,
-        children: [ 
-          {
-            path: '/',
-            component: MenuControls,
-          },
-          {
-            path: '/stayintouch',
-            component: FormControls,
-          },
-
-        ]
-      },
-    ]
   },
   {
     path: '/privacypolicy',

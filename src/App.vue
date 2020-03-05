@@ -1,17 +1,17 @@
 <template lang="pug">
   #app
-    ParticleBackground
+    //- ParticleBackground
     router-view
 </template>
 
 
 <script>
-import ParticleBackground from './components/ParticleBackground.vue'
-export default {
-  components: {
-    ParticleBackground
-  }
-}
+// import ParticleBackground from './components/ParticleBackground.vue'
+// export default {
+//   components: {
+//     ParticleBackground
+//   }
+// }
 
 
 </script>
@@ -19,21 +19,21 @@ export default {
 
 <style lang="stylus">
 #app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
+  font-family: 'TT Norms', Arial;
+  color: white;
+  // font-family 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   width 100vw
   height 100vh
-  // overflow hidden
-  // overflow-y: hidden;
-
 
 
 body
   margin 0
   padding 0
-  overflow hidden
   overflow-x: hidden;
+  &::-webkit-scrollbar
+    display none
 
 
 </style>
