@@ -1,15 +1,29 @@
 <template lang="pug">
   #app
-    ParticleBackground
+    ParticleBackground(v-if="getVisibleParticle")
     router-view
 </template>
 
 
 <script>
+import { mapActions, mapGetters} from 'vuex';
 import ParticleBackground from './components/ParticleBackground.vue'
 export default {
+  computed: {
+    ...mapGetters({
+        getVisibleParticle: "header/getVisibleParticle",
+    })
+  },
+  methods: {
+    ...mapActions({
+      updateParticle: "header/updateParticle",
+    }),
+  },
   components: {
     ParticleBackground
+  },
+  created() {
+    this.updateParticle(true)
   }
 }
 

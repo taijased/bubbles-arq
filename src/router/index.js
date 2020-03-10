@@ -12,12 +12,7 @@ const MenuControls = () => import('../components/MenuControls.vue')
 const FormControls = () => import('../components/FormControls.vue')
 
 
-
-
-
-
-
-
+const ViewerLite = () => import('../views/ViewerLite.vue')
 
 const Error404 = () => import('../views/Error404.vue')
 const PrivacyPolicy = () => import('../views/PrivacyPolicy.vue')
@@ -59,6 +54,10 @@ const routes = [
   {
     path: '/privacypolicy',
     component: PrivacyPolicy
+  },
+  {
+    path: '/viewerlite',
+    component: ViewerLite
   },
   {
     path: '/bc',

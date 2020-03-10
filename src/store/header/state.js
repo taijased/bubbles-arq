@@ -1,4 +1,5 @@
 export default {
   menuStatus: false,
-  contactsStatus: true
+  contactsStatus: true,
+  visibleParticle: true
 }
