@@ -1,8 +1,9 @@
 <template lang="pug">
 .home
   div
-    div Создай дополненную
-    div реальность за пару минут
+    .home__logo
+        img(src="../assets/arq-logo_white.svg")
+    .home__header Создай дополненную реальность за пару минут
     .home__stores
       img(src='../assets/img/AppStore.svg')
       img(src='../assets/img/GooglePlay.svg')
@@ -15,47 +16,90 @@
 
 <style lang="stylus" scoped>
     .home
-
-        font-size: 5.33vh;
         background: #4737D6;
-        height 100vh
+        min-height 100vh
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
+        // padding-top 13.3333vh
         div
-            &:first-child
-                width: 46.666vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            .home__logo
+                img 
+                    margin-top 32px
+                    margin-bottom 32px
+                    width 110px
+                    height 80px
+                @media screen and (min-width: 1000px) 
+                    img 
+                        display none
+                
+                @media screen and (max-width: 1000px) 
+                    img 
+                        display flex
+                       
+            .home__header
                 text-align: center;
+                @media screen and (min-width: 1000px) 
+                    font-size: 40px;
+                    max-width: 600px;
+                @media screen and (max-width: 1000px) 
+                    font-size: 26px;
+                    max-width: 311px;
             .home__stores
-                // width 20
                 margin-top: 2.2222vh;
-                margin-bottom: 10.555vh;
+                margin-bottom: 5.22vh;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
                 img 
+                    width 144px
+                    height 48px
                     &:first-child
                         margin-right: 0.9vw;
+                    &:last-child
+                        width 162px
+                        height 48px
                     &:hover
                         cursor: pointer;
         .home__images
+            width 100vw
             display: flex;
             flex-direction: row;
             align-items: flex-end;
             justify-content: center;
-            img
-                height: 51.111vh;
-                &:first-child
-                    position: relative;
-                    left: 3vw;
-                &:last-child
-                    position: relative;
-                    left: -3vw;
-                &:nth-child(2)
-                    height: 59.111vh;
-                    z-index: 10;
+            
+            @media screen and (min-width: 1000px) 
+                img
+                    height: 51.111vh;
+                    &:first-child
+                        position: relative;
+                        right: -60px;
+                    &:last-child
+                        position: relative;
+                        right: 60px;
+                    &:nth-child(2)
+                        height: 59.111vh;
+                        z-index: 10;
+            @media screen and (max-width: 1000px) 
+                img
+                    height: 300px;
+                    width 200px
+                    &:first-child
+                        position: relative;
+                        left: 140px;
+                    &:last-child
+                        position: relative;
+                        left: -140px;
+                    &:nth-child(2)
+                        height: 59.111vh;
+                        z-index: 10;
+
 </style>  
 
   

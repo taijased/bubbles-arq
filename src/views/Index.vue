@@ -5,6 +5,8 @@
     Features
     Statue
     Howto
+    Downloads
+    Footer
     //- transition(name="fade", mode="out-in", :css="true")
     //-   router-view
     
@@ -17,6 +19,8 @@ import Home from '../components/Home';
 import Features from '../components/Features';
 import Statue from '../components/Statue';
 import Howto from '../components/Howto';
+import Downloads from '../components/Downloads';
+import Footer from '../components/Footer';
 
 export default {
   components: {
@@ -24,7 +28,9 @@ export default {
     Home,
     Features,
     Statue,
-    Howto
+    Howto,
+    Downloads,
+    Footer
   }
 }
 

@@ -31,7 +31,7 @@ export default {
 <style lang="stylus" scoped>
 .navbar
     z-index: 100;
-    font-size: 1.7777vh;
+    font-size: 16px;
     width 100vw;
     position: fixed;
     height: 8.88888vh;
@@ -41,11 +41,15 @@ export default {
     /* color:#14171D; */
     border-width: 1px;
     color white
-    display: flex;
+    
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     transition: all 0.3s;
+    @media screen and (min-width: 1000px) 
+        display: flex;
+    @media screen and (max-width: 1000px) 
+        display: none;
     &__logo
         img 
             width: 55px;

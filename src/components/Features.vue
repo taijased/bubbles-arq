@@ -23,39 +23,39 @@
 
 <style lang="stylus" scoped>
 .features
-    // background red
     background: #14171D;
     padding 8.88888vh 10.27777vw
     .features__header
-        // background white
-        height 150px
-        font-size: 4.444vh;
-        max-width 30vw
-        width 100%
+        @media screen and (min-width: 1000px) 
+            font-size: 40px;
+        @media screen and (max-width: 1000px) 
+            font-size: 26px;
+        max-width 550px
+        // width 100%
         margin-bottom 55px
     .features-container
         width 100%
-        // background blue
         display flex
         flex-flow row wrap
         justify-content space-between
         align-items center
         &__item
-            font-size: 2.2222vh;
+            font-size: 16px;
             color: gray;
-            // margin 10px
-            width 360px
             height 217px
-            // background green
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
+            @media screen and (min-width: 1000px) 
+                max-width 300px
+            @media screen and (max-width: 1000px) 
+                max-width 100%
             span
                 color: white;
                 margin-top: 2vh;
                 margin-bottom: 1.5vh;
-                font-size: 2.6666vh;
+                font-size: 20px;
 
 
     // .features

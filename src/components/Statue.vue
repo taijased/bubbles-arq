@@ -17,44 +17,38 @@
           div
             span
               | Редактор
-            div Простой редактор сцен и
-            div связей между ними
+            div Простой редактор сцен и связей между ними
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
               | Работа с ассетами
-            div От положения в пространстве до смены
-            div материалов модели
+            div От положения в пространстве до смены материалов модели
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
               | Машина состояний
-            div Создание взаимодействий со сценой,
-            div от тапа до тройных свайпов
+            div Создание взаимодействий со сценой, от тапа до тройных свайпов
       .statue-right-table-column
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
               | Работа с анимацией
-            div Поддержка и простой запуск 
-            div анимаций вашей 3D модели
+            div Поддержка и простой запуск анимаций вашей 3D модели
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
               | Редактор
-            div Display potential benefits
-            div Bringing out the best in your schedule
+            div Display potential benefits Bringing out the best in your schedule
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
               | Групповая работа
-            div Делитесь вашими проектами и 
-            div работайте в паре
+            div Делитесь вашими проектами и работайте в паре
     .statue-email
       div Получи доступ в числе первых
       div
@@ -66,26 +60,32 @@
 
 <style lang="stylus" scoped>
     .statue
-        height: 77.8888vh;
         background: #14171D;
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         &__left
+            // min-width 30%
             background-color: #4737D6;
-            width: 45.625vw;
-            height: 100%;
             display: flex;
             flex-flow: column wrap;
             align-items: flex-start;
             justify-content: center;
             img 
-                width: 90%;
+                margin 7.222vh 3.125vw 7.222vh 0px
+                width 100%
+            @media screen and (min-width: 1219px) 
+                width 37vw
+            @media screen and (max-width: 1219px) 
+                width 100vw
+            
         .statue-right
-            height 100%
-            width: 54.375vw;
-            margin-left: 6vw;
+            padding 100px 80px
+            @media screen and (max-width: 1000px) 
+                padding-left 10.27777vw 
+                padding-bottom 84px
+                padding-top 42px
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -101,54 +101,66 @@
                 font-size: 4.4444vh;
                 margin-bottom: 2.444vh;
             .statue-right-table
+                width 100%
                 display: flex;
-                flex-direction: row ;
+                flex-flow: row wrap;
                 align-items: flex-start;
-                justify-content: center;
-                :last-child
-                        // margin-left: 6vw;
-                .statue-right-table-column__item
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    width: 25vw;
-                    margin-bottom: 3.666vh;
-                    div
-                        color: #A6A6A6;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        justify-content: center;
-                        div
-                            color: #A6A6A6;
-                        span
-                            margin-bottom: 1vh;
-                    img 
-                        margin-top: 12px;
-                        margin-right: 0.8vw;
+                justify-content: space-between;
+                // div:first-child
+                //     margin-right 2vw
+                &-column
+                  
+                  .statue-right-table-column__item
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      margin-bottom: 3.666vh;
+                      min-width 281px
+                      div
+                          color: #A6A6A6;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: flex-start;
+                          justify-content: center;
+                          div
+                              color: #A6A6A6;
+                              max-width 250px
+                          span
+                              margin-bottom: 1vh;
+                              color white
+                      img 
+                          margin-top: 12px;
+                          margin-right: 14px;
             .statue-email
                 width: 50vw;
                 margin-top: 3vh;
                 display: flex;
-                flex-direction: row;
+                flex-flow: row wrap;
                 align-items: center;
-                justify-content: flex-start;
+                justify-content: space-between;
                 div
-                    width 100%
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
-                    font-size: 1.777vh;
+                    font-size: 16px;
+                    // margin-bottom 22px
+                    &:first-child
+                      min-width 230px
+                      margin-bottom 22px
                     input 
                         color: #A6A6A6;
                         background-color: #171A20;
                         border: #14171D none 0px;
                         font-size: 1.777vh;
                         height: 48px;
-                        width: 310px;
+                        
                         padding-left: 15px;
+                        @media screen and (min-width: 1219px) 
+                            width: 310px;
+                        @media screen and (max-width: 1219px) 
+                            width: 250px;
                 .statue-email-sendbtn
                     width: 48px;
                     height: 48px;
