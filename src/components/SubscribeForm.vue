@@ -2,7 +2,7 @@
     form(autocomplete="off")
         .form__label E-MAIL
         input(id="email", v-model="email", type="email", name="email", placeholder="WRITE HERE", :class="{ error: emailError }")
-
+        .white-btn(@click="validateForm()") Send
 </template>
 
 
@@ -27,8 +27,6 @@ export default {
     },
 
     methods: {
-
-
         validateForm() {
             if(!this.emailError && this.emailError !== null) {
                 this.loading = true
@@ -63,6 +61,7 @@ export default {
 <style lang="stylus" scoped>
 form
     margin-top 50px
+    width 100%
     display flex
     flex-direction column
     justify-content center
