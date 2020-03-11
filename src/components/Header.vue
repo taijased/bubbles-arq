@@ -36,9 +36,7 @@ export default {
     position: fixed;
     height: 8.88888vh;
     top: 0vh;
-    /* background-color:rgba(​ 71, ​ 55, ​ 214, 0.7); */
     background-color:rgba(70,55,214,0.8);
-    /* color:#14171D; */
     border-width: 1px;
     color white
     

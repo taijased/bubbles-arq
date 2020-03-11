@@ -40,6 +40,7 @@
         justify-content space-between
         align-items center
         &__item
+            font-family: 'TT Norms Regular', Arial;
             font-size: 16px;
             color: gray;
             height 217px
@@ -52,6 +53,7 @@
             @media screen and (max-width: 1000px) 
                 max-width 100%
             span
+                font-family: 'TT Norms Medium', Arial;
                 color: white;
                 margin-top: 2vh;
                 margin-bottom: 1.5vh;

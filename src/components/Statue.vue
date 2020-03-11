@@ -49,17 +49,30 @@
             span
               | Групповая работа
             div Делитесь вашими проектами и работайте в паре
+    
     .statue-email
       div Получи доступ в числе первых
-      div
-        input(type='email', value='Оставь свой E-mail')
-        .statue-email-sendbtn
-          img(src='../assets/img/arrow-right-24px.svg')
+      SubscribeForm
+      //- div
+      //-   input(type='email', value='Оставь свой E-mail')
+      //-   .statue-email-sendbtn
+      //-     img(src='../assets/img/arrow-right-24px.svg')
 
 </template>
 
+<script>
+
+import SubscribeForm from '../components/SubscribeForm';
+export default {
+    components: {
+        SubscribeForm
+    }
+}
+</script>
+
 <style lang="stylus" scoped>
     .statue
+        font-family: 'TT Norms Medium', Arial;
         background: #14171D;
         display: flex;
         flex-flow: row wrap;
@@ -81,6 +94,7 @@
                 width 100vw
             
         .statue-right
+            // font-family: 'TT Norms Regular', Arial;
             padding 100px 80px
             @media screen and (max-width: 1000px) 
                 padding-left 10.27777vw 
@@ -109,7 +123,7 @@
                 // div:first-child
                 //     margin-right 2vw
                 &-column
-                  
+                  font-family: 'TT Norms Regular', Arial;
                   .statue-right-table-column__item
                       display: flex;
                       flex-direction: row;
@@ -133,6 +147,7 @@
                           margin-top: 12px;
                           margin-right: 14px;
             .statue-email
+                font-family: 'TT Norms Regular', Arial;
                 width: 50vw;
                 margin-top: 3vh;
                 display: flex;
@@ -148,29 +163,30 @@
                     // margin-bottom 22px
                     &:first-child
                       min-width 230px
-                      margin-bottom 22px
-                    input 
-                        color: #A6A6A6;
-                        background-color: #171A20;
-                        border: #14171D none 0px;
-                        font-size: 1.777vh;
-                        height: 48px;
+                      @media screen and (max-width: 1219px) 
+                        margin-bottom 22px
+                //     input 
+                //         color: #A6A6A6;
+                //         background-color: #171A20;
+                //         border: #14171D none 0px;
+                //         font-size: 1.777vh;
+                //         height: 48px;
                         
-                        padding-left: 15px;
-                        @media screen and (min-width: 1219px) 
-                            width: 310px;
-                        @media screen and (max-width: 1219px) 
-                            width: 250px;
-                .statue-email-sendbtn
-                    width: 48px;
-                    height: 48px;
-                    background-color: #4737D6;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
+                //         padding-left: 15px;
+                //         @media screen and (min-width: 1219px) 
+                //             width: 310px;
+                //         @media screen and (max-width: 1219px) 
+                //             width: 250px;
+                // .statue-email-sendbtn
+                //     width: 48px;
+                //     height: 48px;
+                //     background-color: #4737D6;
+                //     display: flex;
+                //     flex-direction: row;
+                //     align-items: center;
+                //     justify-content: center;
 
-                    border-radius: 0px 5px 5px 0px;
+                //     border-radius: 0px 5px 5px 0px;
 
 
 </style>  

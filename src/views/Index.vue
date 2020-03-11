@@ -10,7 +10,6 @@
     //- transition(name="fade", mode="out-in", :css="true")
     //-   router-view
     
-
 </template>
 
 <script>
@@ -44,10 +43,6 @@ export default {
 .wrapper 
   width: 100%;
   height: 100%;
-
-
-  
-
 
 
 

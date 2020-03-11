@@ -3,7 +3,7 @@
         .statue-email
             input(id="email", v-model="email", type="email", name="email", placeholder='Оставь свой E-mail', :class="{ error: emailError }")
             .statue-email__sendbtn(@click="validateForm()")
-                img(src='../assets/arrow-right.svg')
+                img(src='../assets/img/arrow-right-24px.svg')
 </template>
 
 <script>
@@ -32,12 +32,21 @@ export default {
                 this.loading = true
                 const idBoard = "5da06c29c9fb3747328efc66"
                 const idList = "5da06c347ffb4d2ed8ffad98"
+
+                var today = new Date();
+                var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                var time = today.getHours() + ":" + today.getMinutes() + ":" + 
+                today.getSeconds();
+                var dateTime = date+' '+time;
+
                 let data = {
                     "name":`${this.email}`,
-                    "desc": "From: https://arq.su/viewerlite",
+                    // "desc": "From: https://arq.su/viewerlite",
+                    "desc": "From "+`${window.location}` + "\n" + dateTime,
                     "idBoard": idBoard,
                     "idList": idList,
                 }
+
                 new Promise((resolve, reject) => {
                     ApiTrello.post('', data)
                         .then(response => {
@@ -60,8 +69,7 @@ export default {
 
 <style lang="stylus" scoped>
 form
-    margin-top 50px
-    width 100%
+    // width 100%
     display flex
     flex-direction column
     justify-content center
@@ -84,9 +92,10 @@ form
             @media screen and (max-width: 1219px) 
                 width: 250px;
         .statue-email__sendbtn
+            cursor pointer
             width: 48px;
             height: 48px;
-            background-color: white
+            background-color: #4737D6;
             display: flex;
             flex-direction: row;
             align-items: center;

@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 
 const Index = () => import('../views/Index.vue')
 
+const ViewerLite = () => import('../views/ViewerLite.vue')
 
 const Error404 = () => import('../views/Error404.vue')
 const PrivacyPolicy = () => import('../views/PrivacyPolicy.vue')
@@ -28,7 +29,11 @@ const routes = [
   { 
     path: "*", 
     component: Error404
-  }
+  },
+  {
+    path: '/viewerlite',
+    component: ViewerLite
+  },
 ]
 
 const router = new VueRouter({
@@ -38,3 +43,5 @@ const router = new VueRouter({
 })
 
 export default router
+
+

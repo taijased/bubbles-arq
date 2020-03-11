@@ -4,7 +4,7 @@
         SubscribeForm
         .gradient-circle
         .viewer-lite__phones
-            img(src="../assets/main-phones.png", alt="AR")
+            //- img(src="../assets/main-phones.png", alt="AR")
 </template>
 
 

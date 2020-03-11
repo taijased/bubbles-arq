@@ -19,7 +19,7 @@
 
 <style lang="stylus">
 #app
-  font-family: 'TT Norms', Arial;
+  font-family: 'TT Norms Medium', Arial;
   color: white;
   // font-family 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased

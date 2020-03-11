@@ -8,9 +8,9 @@
       img(src='../assets/img/AppStore.svg')
       img(src='../assets/img/GooglePlay.svg')
   .home__images
-    img(src='../assets/img/home1.svg')
-    img(src='../assets/img/home2.svg')
-    img(src='../assets/img/home3.svg')
+    img(src='../assets/img/home1.png')
+    img(src='../assets/img/home2.png')
+    img(src='../assets/img/home3.png')
     img(src='../assets/img/oval.svg')
 
 </template>
