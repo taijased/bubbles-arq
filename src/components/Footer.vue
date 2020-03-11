@@ -1,5 +1,3 @@
-
-
 <template lang="pug">
 .footer
     .footer-buttons
@@ -12,6 +10,9 @@
       .footer-right-lang-mobile
         img(src='../assets/img/earth-24px.svg')
         img(src='../assets/img/down-arrow-24px.svg')
+        select(value='RU')
+          option RU
+          option EN
       .home__stores
         img(src='../assets/img/AppStore.svg')
         img(src='../assets/img/GooglePlay.svg')
@@ -73,13 +74,13 @@
                         left: 1.2vw;
                     img:nth-child(2)
                         position: relative;
-                        left: 3.8vw;
+                        left: 50px;
                         z-index: 5;
                     select
                         color white
                         padding-left: 0.3vw;
-                        height: 3.8vh;
-                        width: 3.811vw;
+                        height: 24px;
+                        width: 47px;
                         background-color: #171A20;
                         opacity: 0.5;
                         border-color: #171A20;

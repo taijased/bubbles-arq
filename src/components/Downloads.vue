@@ -1,6 +1,8 @@
 <template lang="pug">
 .downloads
   .downloads-blue-rect
+    //- .downloads-blue-rect__background
+    //-     img(src='../assets/img/vector.svg')
     .downloads-blue-rect-left
         div ЧЕГО ТЫ ЖДЕШЬ?
         div Создавай дополненную рельность уже сейчас
@@ -19,12 +21,13 @@
             padding 7.7777vh 9vw 0 9vw
         @media screen and (max-width: 1000px) 
             padding 0
-            
         background: #14171D;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        position relative
+        z-index 10
         .downloads-blue-rect
             
             @media screen and (min-width: 1000px) 
@@ -32,6 +35,7 @@
                 padding-right 100px
                 padding-top 22px
                 border-radius: 5px;
+                background-image url('../assets/img/vector.svg')
             @media screen and (max-width: 1000px) 
                 padding 26px 42px
                 border-radius: 0px;
@@ -41,7 +45,16 @@
             align-items: center;
             justify-content: space-between;
             background-color: #4737D6;
-            
+            .downloads-blue-rect__background
+                left 1px
+                position absolute
+                height 100%
+                width 100%
+                padding 4.5vh 50vw 0 9vw
+                img 
+                    height 100%
+                    width 100%
+                    overflow hidden
             .downloads-blue-rect-left
                 display: flex;
                 flex-direction: column;

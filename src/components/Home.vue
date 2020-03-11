@@ -11,6 +11,7 @@
     img(src='../assets/img/home1.svg')
     img(src='../assets/img/home2.svg')
     img(src='../assets/img/home3.svg')
+    img(src='../assets/img/oval.svg')
 
 </template>
 
@@ -58,6 +59,8 @@
                 align-items: center;
                 justify-content: center;
                 img 
+                    position relative
+                    z-index 10
                     width 144px
                     height 48px
                     &:first-child
@@ -80,12 +83,15 @@
                     &:first-child
                         position: relative;
                         right: -60px;
-                    &:last-child
+                    &:nth-child(3)
                         position: relative;
                         right: 60px;
                     &:nth-child(2)
                         height: 59.111vh;
                         z-index: 10;
+                    &:nth-child(4)
+                        position absolute
+                        height 67vh
             @media screen and (max-width: 1000px) 
                 img
                     height: 300px;
@@ -93,12 +99,15 @@
                     &:first-child
                         position: relative;
                         left: 140px;
-                    &:last-child
+                    &:nth-child(3)
                         position: relative;
                         left: -140px;
                     &:nth-child(2)
                         height: 59.111vh;
                         z-index: 10;
+                    &:nth-child(4)
+                        display none
+
 
 </style>  
 
