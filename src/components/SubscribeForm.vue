@@ -1,10 +1,10 @@
 <template lang="pug">
     form(autocomplete="off")
-        .form__label E-MAIL
-        input(id="email", v-model="email", type="email", name="email", placeholder="WRITE HERE", :class="{ error: emailError }")
-        .white-btn(@click="validateForm()") Send
+        .statue-email
+            input(id="email", v-model="email", type="email", name="email", placeholder='Оставь свой E-mail', :class="{ error: emailError }")
+            .statue-email__sendbtn(@click="validateForm()")
+                img(src='../assets/arrow-right.svg')
 </template>
-
 
 <script>
 
@@ -66,57 +66,33 @@ form
     flex-direction column
     justify-content center
     align-items center
-    .form__label
-        font-family 'TT Norms Medium'
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 42px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
-    input 
-        width 100%
-        font-family 'TT Norms Medium'
-        font-style: normal;
-        font-weight: bold;
-        font-size: 26px;
-        line-height: 31px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        mix-blend-mode: normal;
-        margin-bottom 40px
-        margin-top 21px
-    .error
-        color #F83902
-
-
-    .personal-content
-        font-family 'TT Norms Medium'
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 17px;
-        text-align: center;
-        color: #FFFFFF;
-    .white-btn 
-        margin-bottom 20px
-
-    @media screen and (max-width: 1000px) 
-        .form__label
-            font-size: 24px;
-            line-height: 28px;
+    
+    .statue-email
+        min-width 300px
+        display: flex;
+        background: #202328;
         input 
-            margin-bottom 40px
-            margin-top 12px
-
-    // @media screen and (min-width: 1000px) 
-input::-webkit-input-placeholder {
-    color: #FFFFFF;
-    opacity: 0.3;
-	text-decoration: underline;
-    background none
-
-}
+            font-family 'TT Norms Medium'
+            color: #A6A6A6;
+            background: #202328;
+            font-size: 1.777vh;
+            height: 48px;
+            padding-left: 15px;
+            border-radius: 5px 0px 0px 5px;
+            @media screen and (min-width: 1219px) 
+                width: 310px;
+            @media screen and (max-width: 1219px) 
+                width: 250px;
+        .statue-email__sendbtn
+            width: 48px;
+            height: 48px;
+            background-color: white
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0px 5px 5px 0px;
+        .error
+            color #F83902
 </style>
+
