@@ -19,13 +19,28 @@
       .footer-right-lang
         img(src='../assets/img/earth-24px.svg')
         img(src='../assets/img/down-arrow-24px.svg')
-        select(value='RU')
-          option(@click="setLocale('ru')") RU
-          option(@click="setLocale('en')") EN
+        select(v-model='localization', @change="setLocalization()")
+          option RU
+          option EN
     .footer-rights 2020 © ARQ, LLC. All rights reserved. Built with ❤️ in Russia, Kazan
     
 
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            localization: 'RU'
+        }
+    },
+    methods: {
+        setLocalization() {
+            this.$i18n.locale = this.$i18n.locale === "ru" ? "en" : "ru";
+        }
+    }
+}
+</script>
 
 <style lang="stylus" scoped>
     .footer
@@ -171,17 +186,4 @@
                 
   
   
-</style>  
-
-
-
-<script>
-export default {
-  
-    methods: {
-        setLocale(loca) {
-            this.$i18n.locale = loca;
-        }
-  }
-};
-</script>
+</style>
