@@ -3,7 +3,8 @@
   div
     .home__logo
         img(src="../assets/arq-logo_white.svg")
-    .home__header Создай дополненную реальность за пару минут
+    //- .home__header Создай дополненную реальность за пару минут
+    .home__header {{$t("auth.signup.password")}}
     .home__stores
       img(src='../assets/img/AppStore.svg')
       img(src='../assets/img/GooglePlay.svg')

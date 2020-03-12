@@ -14,6 +14,7 @@ Vue.use(VueInputMask)
 // Global style css
 import './style/font.css'
 import './style/index.css'
+import i18n from './i18n'
 
 
 
@@ -21,5 +22,6 @@ import './style/index.css'
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')
