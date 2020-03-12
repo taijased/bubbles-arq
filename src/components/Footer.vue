@@ -20,8 +20,8 @@
         img(src='../assets/img/earth-24px.svg')
         img(src='../assets/img/down-arrow-24px.svg')
         select(value='RU')
-          option RU
-          option EN
+          option(@click="setLocale('ru')") RU
+          option(@click="setLocale('en')") EN
     .footer-rights 2020 © ARQ, LLC. All rights reserved. Built with ❤️ in Russia, Kazan
     
 
@@ -174,3 +174,14 @@
 </style>  
 
 
+
+<script>
+export default {
+  
+    methods: {
+        setLocale(loca) {
+            this.$i18n.locale = loca;
+        }
+  }
+};
+</script>

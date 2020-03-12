@@ -3,11 +3,11 @@
         .navbar__logo
             img(src="../assets/arq-logo_white.svg")
         .navbar__buttons
-            div Why faces
-            div Features
-            div Resources
-            div Pricing
-            div Get Started
+            div {{$t("header.first")}}
+            div {{$t("header.second")}}
+            div {{$t("header.third")}}
+            div {{$t("header.fourth")}}
+            div {{$t("header.fifth")}}
        
 </template>
 
