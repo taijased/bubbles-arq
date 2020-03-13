@@ -4,8 +4,8 @@
     //- .downloads-blue-rect__background
     //-     img(src='../assets/img/vector.svg')
     .downloads-blue-rect-left
-        div ЧЕГО ТЫ ЖДЕШЬ?
-        div Создавай дополненную рельность уже сейчас
+        div {{$t("downloads.overheader")}}
+        div {{$t("downloads.header")}}
         .home__stores
             img(src='../assets/img/AppStore.svg')
             img(src='../assets/img/GooglePlay.svg')
@@ -17,6 +17,7 @@
 
 <style lang="stylus" scoped>
     .downloads
+        font-family: 'TT Norms Medium', Arial;
         @media screen and (min-width: 1000px) 
             padding 7.7777vh 9vw 0 9vw
         @media screen and (max-width: 1000px) 

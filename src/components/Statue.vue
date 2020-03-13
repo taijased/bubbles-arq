@@ -4,54 +4,52 @@
     img(src='../assets/img/statue-ui.svg')
   .statue-right
     .statue-right__overheader
-      | ДОПОЛНЕННАЯ РЕАЛЬНОСТЬ ДЛЯ ВСЕХ
-      span РЕЛИЗ СКОРО
+      | {{$t("statue.overheader")}}
+      span {{$t("statue.ooverheader")}}
     .statue-right__header
-      div ARQ Editor простой 
-      div редактор дополненной 
-      div реальности
+      div {{$t("statue.header")}}
     .statue-right-table
       .statue-right-table-column
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
-              | Редактор
-            div Простой редактор сцен и связей между ними
+              | {{$t("statue.table.1.header")}}
+            div {{$t("statue.table.1.content")}}
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
-              | Работа с ассетами
-            div От положения в пространстве до смены материалов модели
+              | {{$t("statue.table.2.header")}}
+            div {{$t("statue.table.2.content")}}
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
-              | Машина состояний
-            div Создание взаимодействий со сценой, от тапа до тройных свайпов
+              | {{$t("statue.table.3.header")}}
+            div {{$t("statue.table.3.content")}}
       .statue-right-table-column
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
-              | Работа с анимацией
-            div Поддержка и простой запуск анимаций вашей 3D модели
+              | {{$t("statue.table.4.header")}}
+            div {{$t("statue.table.4.content")}}
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
-              | Редактор
-            div Display potential benefits Bringing out the best in your schedule
+              | {{$t("statue.table.5.header")}}
+            div {{$t("statue.table.5.content")}}
         .statue-right-table-column__item
           img(src='../assets/img/circle24-check.svg')
           div
             span
-              | Групповая работа
-            div Делитесь вашими проектами и работайте в паре
+              | {{$t("statue.table.6.header")}}
+            div {{$t("statue.table.6.content")}}
     
     .statue-email
-      div Получи доступ в числе первых
+      div {{$t("statue.gainaccess")}}
       SubscribeForm
       //- div
       //-   input(type='email', value='Оставь свой E-mail')
@@ -112,6 +110,7 @@ export default {
                     position: relative;
                     top: -10px;
             .statue-right__header
+                max-width 24.3vw
                 font-size: 4.4444vh;
                 margin-bottom: 2.444vh;
             .statue-right-table

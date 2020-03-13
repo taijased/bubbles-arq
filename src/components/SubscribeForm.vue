@@ -1,7 +1,7 @@
 <template lang="pug">
     form(autocomplete="off")
         .statue-email
-            input(id="email", v-model="email", type="email", name="email", placeholder='Оставь свой E-mail', :class="{ error: emailError }")
+            input(id="email", v-model="email", type="email", name="email", :placeholder='$t("statue.leaveemail")', :class="{ error: emailError }")
             .statue-email__sendbtn(@click="validateForm()")
                 img(src='../assets/img/arrow-right-24px.svg')
 </template>

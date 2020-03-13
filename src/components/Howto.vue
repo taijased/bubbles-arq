@@ -2,21 +2,21 @@
 .howto
   .howto-container
     .howto-container__texts
-      div КАК ЭТО РАБОТАЕТ
+      div {{$t("howto.overheader")}}
       div
-        | Создай AR в 3 простых шага
+        | {{$t("howto.header")}}
       div
-        | Для просмотра проекта необходимо импортировать файл в ARQ Viewer. Наше приложение умеет синхронизироваться со всеми популярными облачными хранилищами.
+        | {{$t("howto.content")}}
     .howto-container__btns
       div
         img(src='../assets/img/date-range-24px.svg')
-        |                         Импортируй файл
+        | {{$t("howto.1")}}
       div
         img(src='../assets/img/edit-24px.svg')
-        |                         Открой проект
+        | {{$t("howto.2")}}
       div
         img(src='../assets/img/person-add-24px.svg')
-        |                         Поделись проектом
+        | {{$t("howto.3")}}
   .howto-images
     img(src='../assets/img/howto-files.svg')
     img(src='../assets/img/howto-projects.svg')

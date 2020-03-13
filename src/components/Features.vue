@@ -1,21 +1,20 @@
 <template lang="pug">
 
 .features
-  .features__header
-    | ARQ Viewer это ваш проводник в мир дополненной реальности
+  .features__header {{$t("features.header")}}
   .features-container
     .features-container__item
       img(src='../assets/img/circle64-alarm.svg')
-      span Простота
-      | Никакого программирования. Просто импортируйте ваши 3D модели прямо в приложение и запускайте дополненную реальность где и когда угодно.
+      span {{$t("features.items.1.header")}}
+      | {{$t("features.items.1.content")}}
     .features-container__item
       img(src='../assets/img/circle64-share.svg')
-      span Делитесь проектами
-      | Мы понимаем, что вам нужно делиться проектами с вашими заказчиками или клиентами. Именно поэтому мы позволяем делиться проектами прямо из приложения.
+      span {{$t("features.items.2.header")}}
+      | {{$t("features.items.2.content")}}
     .features-container__item
       img(src='../assets/img/circle64-models.svg')
-      span Поддержка более 40 3D форматов
-      | Самые популярные 3D форматы уже поддерживаются. Просто подключите ваше облако или импортируйте ваши проекты прямо с устройства.
+      span {{$t("features.items.3.header")}}
+      | {{$t("features.items.3.content")}}
 
 
 

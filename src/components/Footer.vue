@@ -2,26 +2,26 @@
 .footer
     .footer-buttons
         img(src='../assets/img/arq-viewer.svg')
-        div ARQ Viewer
-        div Features
-        div Privacy Policy
-        div Terms of Use
+        div {{$t("footer.1")}}
+        div {{$t("footer.2")}}
+        div {{$t("footer.3")}}
+        div {{$t("footer.4")}}
     .footer-right
       .footer-right-lang-mobile
         img(src='../assets/img/earth-24px.svg')
         img(src='../assets/img/down-arrow-24px.svg')
-        select(value='RU')
-          option RU
+        select(value='EN' v-model='localization', @change="setLocalization()")
           option EN
+          option RU
       .home__stores
         img(src='../assets/img/AppStore.svg')
         img(src='../assets/img/GooglePlay.svg')
       .footer-right-lang
         img(src='../assets/img/earth-24px.svg')
         img(src='../assets/img/down-arrow-24px.svg')
-        select(v-model='localization', @change="setLocalization()")
-          option RU
+        select(value='EN' v-model='localization', @change="setLocalization()")
           option EN
+          option RU
     .footer-rights 2020 © ARQ, LLC. All rights reserved. Built with ❤️ in Russia, Kazan
     
 
@@ -31,7 +31,7 @@
 export default {
     data() {
         return {
-            localization: 'RU'
+            localization: 'EN'
         }
     },
     methods: {
@@ -44,6 +44,7 @@ export default {
 
 <style lang="stylus" scoped>
     .footer
+        font-family: 'TT Norms Regular', Arial;
         background: #14171D;
         display: flex;
         flex-flow: row wrap;

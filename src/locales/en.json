@@ -18,11 +18,90 @@
             }
         }
     },
-  "header": {
-    "first": "Why facces",
-    "second": "Features",
-    "third": "Resources",
-    "fourth": "Pricing",
-    "fifth": "Get started"
-    }
-}
+    "header": {
+      "first": "Why Faces",
+      "second": "Features",
+      "third": "Resources",
+      "fourth": "Prices",
+      "fifth": "Get Started"
+      },
+  
+      "home": {
+          "header": "Create AR in minutes"
+          },
+  
+      "features": {
+          "header": "Create AR in minutes",
+          "items":{
+              "1":{
+                  "header": "Simplicity",
+                  "content": "No programming. Import your 3D models and launch AR everywhere."
+              },
+              "2":{
+                  "header": "Share projects",
+                  "content": "We understand that you need to share projects with your customers. That is why we allow sharing the project directly from the application."
+              },
+              "3":{
+                  "header": "Over 40 3D formats supported",
+                  "content": "The most popular 3D formats are already supported. Just connect your cloud storage or import your projects directly from the device."
+              }
+          }
+          },
+  
+      "statue":{
+          "overheader":"AR FOR EVERYONE",
+          "ooverheader": "RELEASE SOON",
+          "header": "ARQ Editor is a simple editor for AR",
+          "table":{
+              "1":{
+                  "header": "Editor",
+                  "content": "Edit scenes and connections between them"
+              },
+              "2":{
+                  "header": "Work with assets",
+                  "content": "From positioning to materials editing"
+              },
+              "3":{
+                  "header": "State machine",
+                  "content": "Create interactions inside the scene, from tap to triple swipe"
+              },
+              "4":{
+                  "header": "Work with animations",
+                  "content": "Your 3D model's animations are supported and easy to launch"
+              },
+              "5":{
+                  "header": "Display potential benefits",
+                  "content": "Bringing out the best in your schedule"
+              },
+              "6":{
+                  "header": "Teamwork",
+                  "content": "Share your projects and work together"
+              }
+          },
+          "gainaccess": "Be the first to get access",
+          "leaveemail": "Leave your Email"
+      },
+  
+      "howto":{
+          "overheader":"HOW DOES IT WORK",
+          "header": "Create AR in 3 simple steps",
+          "content": "Import files to ARQ Viewer and demostrate your projects. Our application is able to synchronize with all popular cloud storage.",
+          "1": "Import file",
+          "2": "Open project",
+          "3": "Share project"
+      },
+  
+      "downloads":{
+          "overheader":"WHAT ARE YOU WAITING FOR?",
+          "header": "Create AR right now"
+      },
+  
+      "footer":{
+          "1": "ARQ Viewer",
+          "2": "Features",
+          "3": "Privacy policy",
+          "4": "Terms of use"
+  
+      }
+  
+  }
