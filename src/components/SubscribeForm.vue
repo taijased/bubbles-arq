@@ -75,7 +75,8 @@ form
             font-family 'TT Norms Medium'
             color: #A6A6A6;
             background: #202328;
-            font-size: 1.777vh;
+            border-radius 5px
+            font-size: 16px;
             height: 48px;
             padding-left: 15px;
             border-radius: 5px 0px 0px 5px;
@@ -86,6 +87,7 @@ form
         .statue-email__sendbtn
             width: 48px;
             height: 48px;
+            margin-right -5px
             background-color: white
             display: flex;
             flex-direction: row;

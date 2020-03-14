@@ -49,7 +49,7 @@ export default {
             height 700px
         @media screen and (max-width: 1000px) 
             img 
-                height 300px
+                height 200px
     &__title
         margin-top -250px
         max-width 672px
