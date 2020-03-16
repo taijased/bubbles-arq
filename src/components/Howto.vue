@@ -50,7 +50,7 @@
                 align-items: flex-start;
                 justify-content: flex-end;
                 div:nth-child(1)
-                    font-family: 'TT Norms Regular', Arial;
+                    font-family: 'TT Norms Regular';
                     font-size: 12px;
                     margin-bottom: 1.33vh;
                 div:nth-child(2)
@@ -58,13 +58,13 @@
                     margin-bottom: 2.444vh;
                     max-width 240px
                 div:nth-child(3)
-                    font-family: 'TT Norms Regular', Arial;
+                    font-family: 'TT Norms Regular';
                     font-size: 16px;
                     max-width 450px
                     color: gray;
             .howto-container__btns
                 div
-                    font-family: 'TT Norms Regular', Arial;
+                    font-family: 'TT Norms Regular';
                     font-size: 16px;
                     display: flex;
                     flex-direction: row;

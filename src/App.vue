@@ -19,9 +19,8 @@
 
 <style lang="stylus">
 #app
-  font-family: 'TT Norms Medium', Arial;
+  font-family: 'TT Norms Medium';
   color: white;
-  // font-family 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   width 100vw
@@ -29,6 +28,7 @@
 
 
 body
+  background: #4737D6;
   margin 0
   padding 0
   overflow-x: hidden;

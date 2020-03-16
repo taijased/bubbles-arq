@@ -23,7 +23,7 @@
 <style lang="stylus" scoped>
 .features
     background: #14171D;
-    padding 8.88888vh 10.27777vw
+    padding 8.88888vh 9vw
     .features__header
         @media screen and (min-width: 1000px) 
             font-size: 40px;
@@ -39,7 +39,7 @@
         justify-content space-between
         align-items center
         &__item
-            font-family: 'TT Norms Regular', Arial;
+            font-family: 'TT Norms Regular';
             font-size: 16px;
             color: gray;
             height 217px
@@ -52,7 +52,7 @@
             @media screen and (max-width: 1000px) 
                 max-width 100%
             span
-                font-family: 'TT Norms Medium', Arial;
+                font-family: 'TT Norms Medium';
                 color: white;
                 margin-top: 2vh;
                 margin-bottom: 1.5vh;

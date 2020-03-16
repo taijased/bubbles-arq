@@ -30,7 +30,7 @@ export default {
 
 <style lang="stylus" scoped>
 .navbar
-    font-family: 'TT Norms Regular', Arial;
+    font-family: 'TT Norms Regular';
     z-index: 100;
     font-size: 16px;
     width 100vw;

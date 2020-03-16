@@ -70,7 +70,7 @@ export default {
 
 <style lang="stylus" scoped>
     .statue
-        font-family: 'TT Norms Medium', Arial;
+        font-family: 'TT Norms Medium';
         background: #14171D;
         display: flex;
         flex-flow: row wrap;
@@ -86,14 +86,14 @@ export default {
             img 
                 margin 7.222vh 3.125vw 7.222vh 0px
                 width 100%
-            @media screen and (min-width: 1219px) 
-                width 37vw
-            @media screen and (max-width: 1219px) 
+            @media screen and (min-width: 1000px) 
+                width 50vw
+            @media screen and (max-width: 1000px) 
                 width 100vw
             
         .statue-right
-            // font-family: 'TT Norms Regular', Arial;
-            padding 100px 80px
+            padding 100px 2vw
+            padding-left 4vw
             @media screen and (max-width: 1000px) 
                 padding-left 10.27777vw 
                 padding-bottom 84px
@@ -110,7 +110,11 @@ export default {
                     position: relative;
                     top: -10px;
             .statue-right__header
-                max-width 24.3vw
+                
+                @media screen and (min-width: 1000px) 
+                    max-width 24.3vw
+                @media screen and (max-width: 1000px) 
+                    max-width 80vw
                 font-size: 4.4444vh;
                 margin-bottom: 2.444vh;
             .statue-right-table
@@ -122,7 +126,7 @@ export default {
                 // div:first-child
                 //     margin-right 2vw
                 &-column
-                  font-family: 'TT Norms Regular', Arial;
+                  font-family: 'TT Norms Regular';
                   .statue-right-table-column__item
                       display: flex;
                       flex-direction: row;
@@ -146,10 +150,11 @@ export default {
                           margin-top: 12px;
                           margin-right: 14px;
             .statue-email
-                font-family: 'TT Norms Regular', Arial;
-                width: 50vw;
+                font-family: 'TT Norms Regular';
+                // width: 50vw;
                 margin-top: 3vh;
                 display: flex;
+                width 44vw
                 flex-flow: row wrap;
                 align-items: center;
                 justify-content: space-between;
@@ -162,7 +167,7 @@ export default {
                     // margin-bottom 22px
                     &:first-child
                       min-width 230px
-                      @media screen and (max-width: 1219px) 
+                      @media screen and (max-width: 1370px) 
                         margin-bottom 22px
                 //     input 
                 //         color: #A6A6A6;

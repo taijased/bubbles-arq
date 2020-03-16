@@ -17,7 +17,7 @@
 
 <style lang="stylus" scoped>
     .downloads
-        font-family: 'TT Norms Medium', Arial;
+        font-family: 'TT Norms Medium';
         @media screen and (min-width: 1000px) 
             padding 7.7777vh 9vw 0 9vw
         @media screen and (max-width: 1000px) 
@@ -39,6 +39,7 @@
                 background-image url('../assets/img/vector.svg')
             @media screen and (max-width: 1000px) 
                 padding 26px 42px
+                padding-left 9vw
                 border-radius: 0px;
             width 100%
             display: flex;

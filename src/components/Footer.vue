@@ -44,7 +44,7 @@ export default {
 
 <style lang="stylus" scoped>
     .footer
-        font-family: 'TT Norms Regular', Arial;
+        font-family: 'TT Norms Regular';
         background: #14171D;
         display: flex;
         flex-flow: row wrap;

@@ -84,27 +84,31 @@
                     &:first-child
                         position: relative;
                         right: -60px;
+                        z-index: 9;
                     &:nth-child(3)
                         position: relative;
                         right: 60px;
+                        z-index: 9;
                     &:nth-child(2)
                         height: 59.111vh;
                         z-index: 10;
                     &:nth-child(4)
                         position absolute
-                        height 67vh
+                        height 57vh
+                        width 100vw
             @media screen and (max-width: 1000px) 
                 img
                     height: 300px;
-                    width 200px
+                    width 188px
                     &:first-child
+                        height: 282px;
                         position: relative;
-                        left: 140px;
+                        left: 90px;
                     &:nth-child(3)
+                        height: 282px;
                         position: relative;
-                        left: -140px;
+                        left: -90px;
                     &:nth-child(2)
-                        height: 59.111vh;
                         z-index: 10;
                     &:nth-child(4)
                         display none
