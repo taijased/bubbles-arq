@@ -22,6 +22,9 @@ export default {
           } else {
             document.getElementById("navbar").style.top = "-8.88888vh";
           }
+          if(currentScrollPos <= 80){
+              document.getElementById("navbar").style.top = "0";
+          }
           prevScrollpos = currentScrollPos;
         }
     }
