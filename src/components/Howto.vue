@@ -27,7 +27,7 @@
 <style lang="stylus" scoped>
     .howto
         padding 7.7777vh 9vw 0 9vw
-        @media screen and (max-width: 1000px) 
+        @media screen and (max-width: $w-l) 
                 padding 0 10.27777vw 0 10.27777vw
         // height: 75.1111vh;
         background: #14171D;
@@ -44,7 +44,7 @@
             justify-content: center;
             margin-bottom 4vh
             &__texts
-                margin-left: 19px;
+                // margin-left: 19px;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -90,18 +90,18 @@
                     
                     position: relative;
                     z-index: 10;
-                    @media screen and (min-width: 1000px) 
+                    @media screen and (min-width: $w-l) 
                         height: 490px;
-                    @media screen and (max-width: 1000px) 
+                    @media screen and (max-width: $w-l) 
                         height: 320px;
                 &:last-child
                     
                     position: relative;
                     z-index: 0;
-                    @media screen and (min-width: 1000px) 
+                    @media screen and (min-width: $w-l) 
                         left: -110px;
                         height: 440px;
-                    @media screen and (max-width: 1000px) 
+                    @media screen and (max-width: $w-l) 
                         left: -110px;
                         height: 255px;
 

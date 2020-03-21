@@ -1,13 +1,13 @@
 <template lang="pug">
 .home
-  div
+  .home-container
+    .home_lang(v-on:click="setLocalization()") {{$t("localename")}}
     .home__logo
         img(src="../assets/arq-logo_white.svg")
     //- .home__header Создай дополненную реальность за пару минут
     .home__header {{$t("home.header")}}
-    .home__stores
-      img(src='../assets/img/AppStore.svg')
-      img(src='../assets/img/GooglePlay.svg')
+    //- .home__hint {{$t("home.hint")}}
+    Stores
   .home__images
     img(src='../assets/img/home1.png')
     img(src='../assets/img/home2.png')
@@ -16,6 +16,27 @@
 
 </template>
 
+
+
+<script>
+import Stores from '../components/Stores';
+export default {
+    components: {
+        Stores
+    },
+    data() {
+        return {
+            localization: 'EN'
+        }
+    },
+    methods: {
+        setLocalization() {
+            this.$i18n.locale = this.$i18n.locale === "ru" ? "en" : "ru";
+        }
+    }
+}
+</script>
+
 <style lang="stylus" scoped>
     .home
         background: #4737D6;
@@ -23,62 +44,52 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
         // padding-top 13.3333vh
-        div
+        .home-container
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
+            .home_lang
+                cursor pointer
+                text-decoration underline
+                color rgba(255, 255, 255, 0.7)
+                margin-top 2.5vh
+                margin-bottom 3vh
             .home__logo
                 img 
-                    margin-top 32px
-                    margin-bottom 32px
                     width 110px
                     height 80px
-                @media screen and (min-width: 1000px) 
-                    img 
-                        display none
-                
-                @media screen and (max-width: 1000px) 
-                    img 
-                        display flex
-                       
+                    display flex
+            
             .home__header
-                text-align: center;
-                @media screen and (min-width: 1000px) 
-                    font-size: 40px;
-                    max-width: 600px;
-                @media screen and (max-width: 1000px) 
-                    font-size: 26px;
-                    max-width: 311px;
-            .home__stores
-                margin-top: 2.2222vh;
-                margin-bottom: 5.22vh;
+                // margin-bottom 1.0vh
+                min-height 15vh
+                text-align center
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                img 
-                    position relative
-                    z-index 10
-                    width 144px
-                    height 48px
-                    &:first-child
-                        margin-right: 0.9vw;
-                    &:last-child
-                        width 162px
-                        height 48px
-                    &:hover
-                        cursor: pointer;
+                @media screen and (min-width: $w-l) 
+                    font-size: 40px;
+                    max-width: 600px;
+                @media screen and (max-width: $w-l) 
+                    font-size: 26px;
+                    max-width: 311px;
+            // .home__hint
+            //     color rgba(255, 255, 255, 0.7)
+            //     // margin-bottom 1.5vh
+            
         .home__images
+            margin-top 4vh
             width 100vw
             display: flex;
             flex-direction: row;
             align-items: flex-end;
             justify-content: center;
             
-            @media screen and (min-width: 1000px) 
+            @media screen and (min-width: $w-l) 
                 img
                     height: 51.111vh;
                     &:first-child
@@ -96,7 +107,7 @@
                         position absolute
                         height 57vh
                         width 100vw
-            @media screen and (max-width: 1000px) 
+            @media screen and (max-width: $w-l) 
                 img
                     height: 300px;
                     width 188px

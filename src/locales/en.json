@@ -1,5 +1,6 @@
 
 {
+  "localename": "Russian Version",
   "auth": {
         "signin": {
             "title": "Вход",
@@ -27,7 +28,8 @@
       },
   
       "home": {
-          "header": "Create AR in minutes"
+          "header": "Create Augmented reality in minutes",
+          "hint": "Available at"
           },
   
       "features": {

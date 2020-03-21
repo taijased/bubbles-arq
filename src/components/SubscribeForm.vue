@@ -80,10 +80,10 @@ form
         display: flex;
         background: #202328;
         input 
-            font-family 'TT Norms Medium'
+            font-family 'TT Norms Regular'
             color: #A6A6A6;
             background: #202328;
-            font-size: 1.777vh;
+            font-size: 17px;
             height: 48px;
             padding-left: 15px;
             border-radius: 5px 0px 0px 5px;
@@ -101,6 +101,9 @@ form
             align-items: center;
             justify-content: center;
             border-radius: 0px 5px 5px 0px;
+            &:hover
+                transition .3s
+                background #6C5FDE
         .error
             color #F83902
 </style>

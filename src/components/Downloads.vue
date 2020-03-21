@@ -6,22 +6,27 @@
     .downloads-blue-rect-left
         div {{$t("downloads.overheader")}}
         div {{$t("downloads.header")}}
-        .home__stores
-            img(src='../assets/img/AppStore.svg')
-            img(src='../assets/img/GooglePlay.svg')
+        //- .downloads__hint {{$t("home.hint")}}
+        Stores
+    .downloads__rights 2020 © ARQ, LLC. All rights reserved. Built with ❤️ in Russia, Kazan
     .downloads__images
         img(src='../assets/img/home3.svg')
         img(src='../assets/img/home2.svg')
 
 </template>
 
+<script>
+import Stores from '../components/Stores';
+export default {
+    components: {
+        Stores
+    }
+}
+</script>
+
 <style lang="stylus" scoped>
     .downloads
         font-family: 'TT Norms Medium';
-        @media screen and (min-width: 1000px) 
-            padding 7.7777vh 9vw 0 9vw
-        @media screen and (max-width: 1000px) 
-            padding 0
         background: #14171D;
         display: flex;
         flex-direction: row;
@@ -29,81 +34,60 @@
         justify-content: center;
         position relative
         z-index 10
+        height 100vh
         .downloads-blue-rect
-            
-            @media screen and (min-width: 1000px) 
-                padding-left 75px
-                padding-right 100px
-                padding-top 22px
-                border-radius: 5px;
-                background-image url('../assets/img/vector.svg')
-            @media screen and (max-width: 1000px) 
-                padding 26px 42px
-                padding-left 9vw
-                border-radius: 0px;
-            width 100%
+            width 100vw
+            height 100%
+            background-image url('../assets/img/wood.svg')
+            background-size: contain
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: space-between;
             background-color: #4737D6;
-            .downloads-blue-rect__background
-                left 1px
-                position absolute
-                height 100%
-                width 100%
-                padding 4.5vh 50vw 0 9vw
-                img 
-                    height 100%
-                    width 100%
-                    overflow hidden
             .downloads-blue-rect-left
+                margin-top 3vh
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
                 justify-content: center;
                 div:nth-child(1)
                     font-size: 16px;
                     margin-bottom: 1vh;
                 div:nth-child(2)
                     margin-bottom: 2vh;
-                    @media screen and (min-width: 1000px) 
+                    text-align center
+                    max-width 400px
+                    @media screen and (min-width: $w-l) 
                         font-size: 32px;
-                        width: 500px
-                    @media screen and (max-width: 1000px) 
+                    @media screen and (max-width: $w-l) 
                         font-size: 26px;
-                        width: 290px
-                    
-                .home__stores
-                    // width 20
-                    margin-top: 2.2222vh;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    // margin-bottom 42px
-                    img 
-                        &:first-child
-                            margin-right: 16px;
-                        &:hover
-                            cursor: pointer;
+                // .downloads__hint
+                //     font-family: 'TT Norms Regular';
+                //     color rgba(255, 255, 255, 0.7)
+            .downloads__rights
+                text-align center
+                color rgba(255, 255, 255, 0.7)
+                max-width 290px
             .downloads__images
-                
-                @media screen and (min-width: 1000px) 
-                    display: flex;
-                @media screen and (max-width: 1000px) 
-                    display: none;
+                display: flex;
                 flex-direction: row;
                 align-items: flex-end;
                 justify-content: center;
+                // margin-top 30px
                 img
                     position relative
-                    height 316px
-                    width 244px
-                    &:first-child
-                        height 266px
-                        width 194px
-                        left 30px
+                    @media screen and (min-width: $w-l) 
+                        height 65vh
+                        &:first-child
+                            height 58vh
+                            left 5vw
+                    @media screen and (max-width: $w-l) 
+                        height 65vh
+                        &:first-child
+                            height 58vh
+                            left 20vw
+                    
 
                 
 </style>  

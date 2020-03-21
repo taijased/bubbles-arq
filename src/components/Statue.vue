@@ -79,6 +79,9 @@ export default {
         &__left
             // min-width 30%
             background-color: #4737D6;
+            background-image url('../assets/img/wood.svg')
+            // background-position right
+            background-size contain
             display: flex;
             flex-flow: column wrap;
             align-items: flex-start;
@@ -94,7 +97,7 @@ export default {
         .statue-right
             padding 100px 2vw
             padding-left 4vw
-            @media screen and (max-width: 1000px) 
+            @media screen and (max-width: $w-l) 
                 padding-left 10.27777vw 
                 padding-bottom 84px
                 padding-top 42px
@@ -111,9 +114,9 @@ export default {
                     top: -10px;
             .statue-right__header
                 
-                @media screen and (min-width: 1000px) 
+                @media screen and (min-width: $w-l) 
                     max-width 24.3vw
-                @media screen and (max-width: 1000px) 
+                @media screen and (max-width: $w-l) 
                     max-width 80vw
                 font-size: 4.4444vh;
                 margin-bottom: 2.444vh;
@@ -167,7 +170,7 @@ export default {
                     // margin-bottom 22px
                     &:first-child
                       min-width 230px
-                      @media screen and (max-width: 1370px) 
+                      @media screen and (max-width: $w-xl) 
                         margin-bottom 22px
                 //     input 
                 //         color: #A6A6A6;

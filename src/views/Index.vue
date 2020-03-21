@@ -1,35 +1,35 @@
 <template lang="pug">
   .wrapper
-    Header
+    //- Header
     Home
     Features
     Statue
     Howto
     Downloads
-    Footer
+    //- Footer
     //- transition(name="fade", mode="out-in", :css="true")
     //-   router-view
     
 </template>
 
 <script>
-import Header from '../components/Header';
+// import Header from '../components/Header';
 import Home from '../components/Home';
 import Features from '../components/Features';
 import Statue from '../components/Statue';
 import Howto from '../components/Howto';
 import Downloads from '../components/Downloads';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
 export default {
   components: {
-    Header,
+    // Header,
     Home,
     Features,
     Statue,
     Howto,
-    Downloads,
-    Footer
+    Downloads
+    // Footer
   }
 }
 
