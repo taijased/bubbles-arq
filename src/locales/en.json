@@ -72,8 +72,8 @@
                   "content": "Your 3D model's animations are supported and easy to launch"
               },
               "5":{
-                  "header": "Display potential benefits",
-                  "content": "Bringing out the best in your schedule"
+                  "header": "Cross-platform",
+                  "content": "All projects function the same on every device"
               },
               "6":{
                   "header": "Teamwork",
@@ -90,7 +90,8 @@
           "content": "Import files to ARQ Viewer and demostrate your projects. Our application is able to synchronize with all popular cloud storage.",
           "1": "Import file",
           "2": "Open project",
-          "3": "Share project"
+          "3": "Share project*",
+          "soon": "*soon"
       },
   
       "downloads":{

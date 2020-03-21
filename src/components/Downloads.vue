@@ -46,7 +46,7 @@ export default {
             justify-content: space-between;
             background-color: #4737D6;
             .downloads-blue-rect-left
-                margin-top 3vh
+                margin-top 6vh
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -83,10 +83,11 @@ export default {
                             height 58vh
                             left 5vw
                     @media screen and (max-width: $w-l) 
-                        height 65vh
+                        height 40vh
+                        left -5vw
                         &:first-child
-                            height 58vh
-                            left 20vw
+                            height 35vh
+                            left 8vw
                     
 
                 

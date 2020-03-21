@@ -77,10 +77,8 @@ export default {
         align-items: center;
         justify-content: flex-start;
         &__left
-            // min-width 30%
             background-color: #4737D6;
             background-image url('../assets/img/wood.svg')
-            // background-position right
             background-size contain
             display: flex;
             flex-flow: column wrap;
@@ -89,14 +87,15 @@ export default {
             img 
                 margin 7.222vh 3.125vw 7.222vh 0px
                 width 100%
-            @media screen and (min-width: 1000px) 
+            @media screen and (min-width: $w-l) 
                 width 50vw
-            @media screen and (max-width: 1000px) 
+            @media screen and (max-width: $w-l) 
                 width 100vw
             
         .statue-right
             padding 100px 2vw
             padding-left 4vw
+            padding-right 0px
             @media screen and (max-width: $w-l) 
                 padding-left 10.27777vw 
                 padding-bottom 84px
@@ -125,11 +124,13 @@ export default {
                 display: flex;
                 flex-flow: row wrap;
                 align-items: flex-start;
-                justify-content: space-between;
-                // div:first-child
-                //     margin-right 2vw
+                justify-content: flex-start;
                 &-column
                   font-family: 'TT Norms Regular';
+                  @media screen and (min-width: 1000px) 
+                      &:last-child
+                        margin-left 2vw
+                  
                   .statue-right-table-column__item
                       display: flex;
                       flex-direction: row;
@@ -154,46 +155,21 @@ export default {
                           margin-right: 14px;
             .statue-email
                 font-family: 'TT Norms Regular';
-                // width: 50vw;
                 margin-top: 3vh;
                 display: flex;
                 width 44vw
-                flex-flow: row wrap;
-                align-items: center;
-                justify-content: space-between;
+                flex-flow: column;
+                align-items: flex-start;
+                justify-content: flex-start;
                 div
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
                     font-size: 16px;
-                    // margin-bottom 22px
                     &:first-child
                       min-width 230px
-                      @media screen and (max-width: $w-xl) 
-                        margin-bottom 22px
-                //     input 
-                //         color: #A6A6A6;
-                //         background-color: #171A20;
-                //         border: #14171D none 0px;
-                //         font-size: 1.777vh;
-                //         height: 48px;
-                        
-                //         padding-left: 15px;
-                //         @media screen and (min-width: 1219px) 
-                //             width: 310px;
-                //         @media screen and (max-width: 1219px) 
-                //             width: 250px;
-                // .statue-email-sendbtn
-                //     width: 48px;
-                //     height: 48px;
-                //     background-color: #4737D6;
-                //     display: flex;
-                //     flex-direction: row;
-                //     align-items: center;
-                //     justify-content: center;
-
-                //     border-radius: 0px 5px 5px 0px;
+                      margin-bottom 22px
 
 
 </style>  

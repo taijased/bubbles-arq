@@ -8,15 +8,22 @@
       div
         | {{$t("howto.content")}}
     .howto-container__btns
-      div
+      .howto-container__btns-btn
+        .howto-container__btns-back
+        .howto-container__btns-slide
         img(src='../assets/img/date-range-24px.svg')
-        | {{$t("howto.1")}}
-      div
+        .howto-container__btns-text {{$t("howto.1")}}
+      .howto-container__btns-btn
+        .howto-container__btns-back
+        .howto-container__btns-slide
         img(src='../assets/img/edit-24px.svg')
-        | {{$t("howto.2")}}
-      div
+        .howto-container__btns-text {{$t("howto.2")}}
+      .howto-container__btns-btn
+        .howto-container__btns-back
+        .howto-container__btns-slide
         img(src='../assets/img/person-add-24px.svg')
-        | {{$t("howto.3")}}
+        .howto-container__btns-text {{$t("howto.3")}}
+    .howto-container__hint {{$t("howto.soon")}}
   .howto-images
     img(src='../assets/img/howto-files.svg')
     img(src='../assets/img/howto-projects.svg')
@@ -26,25 +33,28 @@
 
 <style lang="stylus" scoped>
     .howto
-        padding 7.7777vh 9vw 0 9vw
-        @media screen and (max-width: $w-l) 
-                padding 0 10.27777vw 0 10.27777vw
-        // height: 75.1111vh;
         background: #14171D;
         display: flex;
-        flex-flow: row wrap;
-        align-items: flex-start;
-        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        justify-content center;
+        padding-top 4vh
+        @media screen and (max-width: $w-l) 
+                padding 0 10.27777vw 0 10.27777vw
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content center;
         &-container
             // width: 33vw;
             // height: 100%;
+            margin-right 4vw
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            margin-bottom 4vh
+            // margin-top 4vh
             &__texts
-                // margin-left: 19px;
+                margin-left: 15px;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -63,7 +73,9 @@
                     max-width 450px
                     color: gray;
             .howto-container__btns
-                div
+                .howto-container__btns-btn
+                    position relative
+                    // background red
                     font-family: 'TT Norms Regular';
                     font-size: 16px;
                     display: flex;
@@ -71,39 +83,77 @@
                     align-items: center;
                     justify-content: flex-start;
                     margin-top: 1.3vh;
+                    width: 288px;
+                    height 48px
+                    &:hover
+                        .howto-container__btns-slide
+                            width 288px
+                            transition 2s
+                        .howto-container__btns-back
+                            width 288px
                     &:first-child
                         margin-top: 2.8888vh;
-                        width: 288px;
-                        height 48px
-                        background: #4737D6;
-                        border-radius: 5px;
                     img 
+                        position relative
+                        z-index 10
                         height: 24px;
                         margin: 12px 12px 12px 16px;
+                    .howto-container__btns-back
+                        height 48px
+                        border-radius: 5px;
+                        z-index 8
+                        width 0
+                        background #4737D6
+                        position absolute
+                        // top -28px
+                    .howto-container__btns-slide
+                        height 48px
+                        border-radius: 5px;
+                        // top -20px
+                        z-index 9
+                        width 0
+                        background #6C5FDE
+                        position absolute
+                    .howto-container__btns-text
+                        background none
+                        position relative
+                        z-index 10
+                        margin 0
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+            .howto-container__hint
+              margin-top 5vh
+              margin-left 15px
+              color: gray;
         .howto-images
+            
             display: flex;
             flex-direction: row;
             align-items: flex-end;
             justify-content: flex-start;
             img 
                 &:first-child
-                    
                     position: relative;
                     z-index: 10;
                     @media screen and (min-width: $w-l) 
+                        margin-left 3vw
                         height: 490px;
+                        left: 110px;
                     @media screen and (max-width: $w-l) 
+                        margin-top 2vw
                         height: 320px;
+                        // left: 55px;
+                        
                 &:last-child
-                    
                     position: relative;
                     z-index: 0;
                     @media screen and (min-width: $w-l) 
-                        left: -110px;
                         height: 440px;
                     @media screen and (max-width: $w-l) 
-                        left: -110px;
                         height: 255px;
+                        left: -55px;
 
 </style>  
 

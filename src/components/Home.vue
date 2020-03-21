@@ -109,16 +109,16 @@ export default {
                         width 100vw
             @media screen and (max-width: $w-l) 
                 img
-                    height: 300px;
-                    width 188px
+                    height: 285px;
+                    width 200px
                     &:first-child
-                        height: 282px;
+                        height: 228px;
                         position: relative;
-                        left: 90px;
+                        left: 120px;
                     &:nth-child(3)
-                        height: 282px;
+                        height: 228px;
                         position: relative;
-                        left: -90px;
+                        left: -100px;
                     &:nth-child(2)
                         z-index: 10;
                     &:nth-child(4)
