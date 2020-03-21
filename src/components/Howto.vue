@@ -25,8 +25,10 @@
         .howto-container__btns-text {{$t("howto.3")}}
     .howto-container__hint {{$t("howto.soon")}}
   .howto-images
-    img(src='../assets/img/howto-files.svg')
+    img(src='../assets/img/phone-frame.png')
+    //- video(src='../assets/vid/phone-videvo.MP4' type='video/mp4')
     img(src='../assets/img/howto-projects.svg')
+      
 
 
 </template>
@@ -75,7 +77,6 @@
             .howto-container__btns
                 .howto-container__btns-btn
                     position relative
-                    // background red
                     font-family: 'TT Norms Regular';
                     font-size: 16px;
                     display: flex;
@@ -128,7 +129,6 @@
               margin-left 15px
               color: gray;
         .howto-images
-            
             display: flex;
             flex-direction: row;
             align-items: flex-end;
@@ -140,12 +140,11 @@
                     @media screen and (min-width: $w-l) 
                         margin-left 3vw
                         height: 490px;
+                        // width 500px
                         left: 110px;
                     @media screen and (max-width: $w-l) 
                         margin-top 2vw
                         height: 320px;
-                        // left: 55px;
-                        
                 &:last-child
                     position: relative;
                     z-index: 0;
@@ -158,9 +157,3 @@
 </style>  
 
 
-// @media screen and (min-width: 1000px) 
-//                     font-size: 40px;
-//                     max-width: 600px;
-//                 @media screen and (max-width: 1000px) 
-//                     font-size: 26px;
-//                     max-width: 311px;
