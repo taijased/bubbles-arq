@@ -16,6 +16,7 @@ import './style/font.css'
 import './style/index.css'
 import i18n from './i18n'
 
+
 new Vue({
   router,
   store,
