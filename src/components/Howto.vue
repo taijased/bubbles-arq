@@ -33,7 +33,8 @@
     //- video.video-container(ref='videoRef', src='../assets/vid/phone-videvo.MP4', width='100%', controls='')
     //- iframe(src='https://vk.com/video?q=%D0%BA%D0%BE%D1%82&z=video-31480508_456239214', width='680', height='480', frameborder='0')
     //- videoPlayer.videvo(:options="optionsA")
-    videoPlayer.videvo(ref='videoPlayer', :options='playerOptions', :playsinline='true', @play='onPlayerPlay($event)', @pause='onPlayerPause($event)', @ended='onPlayerEnded($event)', @loadeddata='onPlayerLoadeddata($event)', @waiting='onPlayerWaiting($event)', @playing='onPlayerPlaying($event)', @timeupdate='onPlayerTimeupdate($event)', @canplay='onPlayerCanplay($event)', @canplaythrough='onPlayerCanplaythrough($event)', @ready='playerReadied', @statechanged='playerStateChanged($event)')
+    .videvo
+      videoPlayer(ref='videoPlayer', :options='playerOptions', :playsinline='true', @play='onPlayerPlay($event)', @pause='onPlayerPause($event)', @ended='onPlayerEnded($event)', @loadeddata='onPlayerLoadeddata($event)', @waiting='onPlayerWaiting($event)', @playing='onPlayerPlaying($event)', @timeupdate='onPlayerTimeupdate($event)', @canplay='onPlayerCanplay($event)', @canplaythrough='onPlayerCanplaythrough($event)', @ready='playerReadied', @statechanged='playerStateChanged($event)')
 
 
     //- VuePlayer(v-bind="videvo")
@@ -56,12 +57,13 @@ export default {
             ],
             // videojs options
             playerOptions: {
-                height: '460',
-                width: '225',
+                // height: '460',
+                // width: '225',
                 autoplay: true,
                 loop: true,
                 controls:false,
                 muted: true,
+                fluid: true,
                 language: 'en',
                 nativeControlsForTouch: false,
                 //   playbackRates: [0.7, 1.0, 1.5, 2.0],
@@ -248,6 +250,8 @@ export default {
                 left 120px
                 top 15px
                 z-index: 9;
+                height 460px
+                width 225px
             img 
                 &:first-child
                     position: relative;
