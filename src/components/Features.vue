@@ -22,30 +22,38 @@
 
 <style lang="stylus" scoped>
 .feat
+    
     background: #14171D;
     display flex
     flex-flow row 
     justify-content center
     align-items center
     .features
-        margin 8.88888vh 0
+        width 100%
+        max-width $w-xxl
+        padding 80px 148px
+        @media screen and (min-width: $w-s) 
+            padding 80px 148px
+        @media screen and (max-width: $w-s) 
+            padding 42px 32px
         .features__header
             @media screen and (min-width: $w-l) 
                 margin-bottom 55px
+            @media screen and (min-width: $w-s) and (max-width: $w-l) 
                 font-size: 40px;
-            @media screen and (max-width: $w-l) 
+            @media screen and (max-width: $w-s) 
                 font-size: 26px;
-                margin-left 9vw
+
             max-width 550px
             
         .features-container
-            width 100%
+            // width 100%
             display flex
             flex-flow row wrap
             justify-content space-between
             align-items center
             &__item
-                margin-left 9vw
+                // margin-left 100px
                 font-family: 'TT Norms Regular';
                 font-size: 16px;
                 color: gray;
@@ -56,8 +64,7 @@
                 justify-content: center;
                 @media screen and (min-width: $w-l) 
                     max-width 300px
-                    &:first-child
-                        margin-left 0
+                    
                 @media screen and (max-width: $w-l) 
                     max-width 100%
                 

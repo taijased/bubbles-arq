@@ -77,16 +77,16 @@ export default {
                 // margin-top 30px
                 img
                     position relative
-                    @media screen and (min-width: $w-l) 
+                    @media screen and (min-width: $w-m) 
                         height 65vh
                         &:first-child
                             height 58vh
                             left 5vw
-                    @media screen and (max-width: $w-l) 
-                        height 40vh
+                    @media screen and (max-width: $w-m) 
+                        height 260px
                         left -5vw
                         &:first-child
-                            height 35vh
+                            height 200px
                             left 8vw
                     
 

@@ -70,11 +70,13 @@ export default {
 
 <style lang="stylus" scoped>
     .statue
+        width 100%
+        // max-width $w-xxl
         font-family: 'TT Norms Medium';
         background: #14171D;
         display: flex;
         flex-flow: row wrap;
-        align-items: center;
+        align-items: space-between;
         justify-content: flex-start;
         &__left
             background-color: #4737D6;
@@ -87,25 +89,26 @@ export default {
             img 
                 margin 7.222vh 3.125vw 7.222vh 0px
                 width 100%
-            @media screen and (min-width: $w-l) 
+            @media screen and (min-width: $w-xl) 
                 width 50vw
-            @media screen and (max-width: $w-l) 
+            @media screen and (max-width: $w-xl) 
                 width 100vw
             
         .statue-right
-            padding 100px 2vw
-            padding-left 4vw
-            padding-right 0px
-            @media screen and (max-width: $w-l) 
-                padding-left 10.27777vw 
-                padding-bottom 84px
+            padding-left 148px
+            padding-top 100px
+            @media screen and (min-width: $w-l) 
+                padding-left 80px
+            @media screen and (max-width: $w-s) 
+                padding-left 32px
                 padding-top 42px
+                // width 100%
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
             &__overheader
-                font-size: 1.3333vh;
+                font-size: 12px;
                 margin-bottom: 1.33vh;
                 span 
                     color:#D00202;
@@ -113,11 +116,13 @@ export default {
                     top: -10px;
             .statue-right__header
                 
-                @media screen and (min-width: $w-l) 
-                    max-width 24.3vw
-                @media screen and (max-width: $w-l) 
-                    max-width 80vw
-                font-size: 4.4444vh;
+                @media screen and (min-width: $w-m) 
+                    font-size: 40px;
+                    max-width 400px
+                @media screen and (max-width: $w-m) 
+                    max-width 300px
+                    font-size: 26px;
+                
                 margin-bottom: 2.444vh;
             .statue-right-table
                 width 100%
@@ -127,9 +132,20 @@ export default {
                 justify-content: flex-start;
                 &-column
                   font-family: 'TT Norms Regular';
-                  @media screen and (min-width: 1000px) 
-                      &:last-child
-                        margin-left 2vw
+                  &:last-child
+                    margin-left 7vw
+                    @media screen and (max-width: $w-m) 
+                      margin-left 0
+                    @media screen and (min-width: $w-xl) 
+                      margin-left 2vw
+                  // @media screen and (min-width: $w-m) 
+                  //     &:last-child
+                  //       margin-left 2vw
+                  // @media screen and (min-width: $w-m) 
+                  //     &:last-child
+                  //       margin-left 2vw
+                  
+                      
                   
                   .statue-right-table-column__item
                       display: flex;
@@ -157,7 +173,7 @@ export default {
                 font-family: 'TT Norms Regular';
                 margin-top: 3vh;
                 display: flex;
-                width 44vw
+                width 350px
                 flex-flow: column;
                 align-items: flex-start;
                 justify-content: flex-start;
