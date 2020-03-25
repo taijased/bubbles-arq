@@ -24,7 +24,7 @@
           .howto-container__btns-slide(:style='sliders[2]')
           img(src='../assets/img/person-add-24px.svg')
           .howto-container__btns-text {{$t("howto.3")}}
-      .howto-container__hint {{$t("howto.soon")}} animatedNumber {{ animatedNumber }} number {{ number }} normalTime {{ normalTime }}
+      .howto-container__hint {{$t("howto.soon")}} normalTime {{ normalTime }}
     .howto-images
       .howto-videvo
         .videvo-cover  
@@ -40,9 +40,6 @@
     export default {
         data() {
             return {
-                number: 0,
-                tweenedNumber: 0,
-                delta: 0,
                 normalTime: 0,
                 currentBtn: 0,
                 backs: [
@@ -79,14 +76,6 @@
         computed: {
             player() {
                 return this.$refs.videoPlayer.player
-            },
-            animatedNumber() {
-                return this.tweenedNumber.toFixed(0);
-            }
-        },
-        watch:{
-            number(newValue) {
-                TweenLite.to(this.$data, 0.5, { tweenedNumber: newValue });
             }
         },
         components: {
@@ -105,8 +94,6 @@
                 }
             },
             onPlayerTimeupdate(player) {
-                this.delta = player.currentTime() - this.delta
-                // console.log(this.delta)
                 this.normalTime = (player.currentTime() / player.duration())
                 this.number = this.normalTime
                 this.sliders[this.currentBtn].width = this.normalTime * 100 + '%'
