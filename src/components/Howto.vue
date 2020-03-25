@@ -24,12 +24,12 @@
           .howto-container__btns-slide(:style='sliders[2]')
           img(src='../assets/img/person-add-24px.svg')
           .howto-container__btns-text {{$t("howto.3")}}
-      .howto-container__hint {{$t("howto.soon")}} sliders[currentBtn].width {{ sliders[currentBtn].width }}
+      .howto-container__hint {{$t("howto.soon")}} 
     .howto-images
       .howto-videvo
         .videvo-cover  
         .videvo
-          videoPlayer(ref='videoPlayer', :options='playerOptions', :playsinline='true', @playing='onPlayerPlay($event)', @ended='onPlayerEnded($event)')
+          videoPlayer(ref='videoPlayer', :options='playerOptions', :playsinline='true', @playing='onPlayerPlay($event)')
       img(src='../assets/img/howto-projects.png')
       
 </template>
@@ -44,6 +44,7 @@
                 normalTime: 0,
                 currentBtn: 0,
                 currentAnim: 0,
+                players: 0,
                 backs: [
                     { width: '288px' },
                     { width: 0 },
@@ -63,12 +64,15 @@
                     autoplay: true,
                     loop: true,
                     controls:false,
+                    preload: true,
                     muted: true,
                     fluid: true,
                     language: 'en',
                     nativeControlsForTouch: false,
                     sources: [{
                         type: "video/mp4",
+                        src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
+                        src: 'https://yanovp.arq.su/vid/howto2.mp4',
                         src: 'https://yanovp.arq.su/vid/howto1.mp4'
                     }],
                     poster: "../assets/img/howto-projects.svg",
@@ -104,19 +108,18 @@
                 // this.number = this.normalTime
                 // this.sliders[this.currentBtn].width = this.normalTime * 100 + '%'
             // },
-            onPlayerEnded(player) {
-                this.sliders[this.currentBtn].width = 0;
-                console.log("ended")
-            },
+            // onPlayerEnded(player) {
+            //     this.sliders[this.currentBtn].width = 0;
+            //     console.log("ended")
+            // },
             onPlayerPlay(player) {
-                // this.currentAnim.kill();
-                
+                // this.players = player.getPlayers()
                 for (let i = 0; i < 3; i++) {
                     gsap.killTweensOf(this.sliders[i]);
                     this.sliders[i].width = 0;
                 }
                 this.currentAnim = gsap.to(this.sliders[this.currentBtn], {duration: player.duration(), width: 100 + '%',});
-                console.log("play")
+                console.log("play", player, this.players)
             }
         }
     }
