@@ -29,7 +29,7 @@
       .howto-videvo
         .videvo-cover  
         .videvo
-          videoPlayer(ref='videoPlayer', :options='playerOptions', :playsinline='true', @play='onPlayerPlay($event)')
+          videoPlayer(ref='videoPlayer', :options='playerOptions', :playsinline='true', @playing='onPlayerPlay($event)', @ended='onPlayerEnded($event)')
       img(src='../assets/img/howto-projects.png')
       
 </template>
@@ -104,14 +104,17 @@
                 // this.number = this.normalTime
                 // this.sliders[this.currentBtn].width = this.normalTime * 100 + '%'
             // },
-            // onPlayerEnded(player) {
-            //     this.sliders[this.currentBtn].width = 0;
-            //     console.log("ended")
-            // },
+            onPlayerEnded(player) {
+                this.sliders[this.currentBtn].width = 0;
+                console.log("ended")
+            },
             onPlayerPlay(player) {
                 // this.currentAnim.kill();
                 
-                
+                for (let i = 0; i < 3; i++) {
+                    gsap.killTweensOf(this.sliders[i]);
+                    this.sliders[i].width = 0;
+                }
                 this.currentAnim = gsap.to(this.sliders[this.currentBtn], {duration: player.duration(), width: 100 + '%',});
                 console.log("play")
             }
