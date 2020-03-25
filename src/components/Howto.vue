@@ -24,17 +24,18 @@
           .howto-container__btns-slide(:style='sliders[2]')
           img(src='../assets/img/person-add-24px.svg')
           .howto-container__btns-text {{$t("howto.3")}}
-      .howto-container__hint {{$t("howto.soon")}} normalTime {{ normalTime }}
+      .howto-container__hint {{$t("howto.soon")}} sliders[currentBtn].width {{ sliders[currentBtn].width }}
     .howto-images
       .howto-videvo
         .videvo-cover  
         .videvo
-          videoPlayer(ref='videoPlayer', :options='playerOptions', :playsinline='true', @play='onPlayerPlay($event)', @timeupdate='onPlayerTimeupdate($event)')
+          videoPlayer(ref='videoPlayer', :options='playerOptions', :playsinline='true', @play='onPlayerPlay($event)')
       img(src='../assets/img/howto-projects.png')
       
 </template>
 
 <script>
+    import gsap from 'gsap'
     import 'video.js/dist/video-js.css'
     import { videoPlayer } from 'vue-video-player'
     export default {
@@ -42,6 +43,7 @@
             return {
                 normalTime: 0,
                 currentBtn: 0,
+                currentAnim: 0,
                 backs: [
                     { width: '288px' },
                     { width: 0 },
@@ -91,15 +93,27 @@
                         this.sliders[i].width = 0
                     }
                     this.backs[this.currentBtn].width='288px'
+                    for (let i = 0; i < 3; i++) {
+                        gsap.killTweensOf(this.sliders[i]);
+                        this.sliders[i].width = 0;
+                    }
                 }
             },
-            onPlayerTimeupdate(player) {
-                this.normalTime = (player.currentTime() / player.duration())
-                this.number = this.normalTime
-                this.sliders[this.currentBtn].width = this.normalTime * 100 + '%'
-            },
+            // onPlayerTimeupdate(player) {
+                // this.normalTime = (player.currentTime() / player.duration())
+                // this.number = this.normalTime
+                // this.sliders[this.currentBtn].width = this.normalTime * 100 + '%'
+            // },
+            // onPlayerEnded(player) {
+            //     this.sliders[this.currentBtn].width = 0;
+            //     console.log("ended")
+            // },
             onPlayerPlay(player) {
-
+                // this.currentAnim.kill();
+                
+                
+                this.currentAnim = gsap.to(this.sliders[this.currentBtn], {duration: player.duration(), width: 100 + '%',});
+                console.log("play")
             }
         }
     }

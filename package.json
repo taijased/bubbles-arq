@@ -11,6 +11,7 @@
     "@algoz098/vue-player": "^0.4.3",
     "axios": "^0.19.1",
     "core-js": "^3.4.3",
+    "gsap": "^3.2.6",
     "inputmask": "^5.0.3",
     "node-sass": "^4.13.0",
     "pug": "^2.0.4",
