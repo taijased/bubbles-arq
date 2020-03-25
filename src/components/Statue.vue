@@ -87,11 +87,11 @@ export default {
             align-items: flex-start;
             justify-content: center;
             img 
-                margin 7.222vh 3.125vw 7.222vh 0px
+                margin 7.222vh 0vw 7.222vh 0px
                 width 100%
-            @media screen and (min-width: $w-xl) 
-                width 50vw
-            @media screen and (max-width: $w-xl) 
+            @media screen and (min-width: $w-l) 
+                width 49vw
+            @media screen and (max-width: $w-l) 
                 width 100vw
             
         .statue-right
@@ -136,7 +136,7 @@ export default {
                     margin-left 7vw
                     @media screen and (max-width: $w-m) 
                       margin-left 0
-                    @media screen and (min-width: $w-xl) 
+                    @media screen and (min-width: $w-l) 
                       margin-left 2vw
                   // @media screen and (min-width: $w-m) 
                   //     &:last-child

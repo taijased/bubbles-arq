@@ -44,7 +44,6 @@
                 normalTime: 0,
                 currentBtn: 0,
                 currentAnim: 0,
-                players: 0,
                 backs: [
                     { width: '288px' },
                     { width: 0 },
@@ -119,7 +118,7 @@
                     this.sliders[i].width = 0;
                 }
                 this.currentAnim = gsap.to(this.sliders[this.currentBtn], {duration: player.duration(), width: 100 + '%',});
-                console.log("play", player, this.players)
+                // console.log("play", player, this.players)
             }
         }
     }
