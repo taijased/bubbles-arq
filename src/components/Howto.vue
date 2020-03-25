@@ -187,6 +187,7 @@
                         width 0
                         background #6C5FDE
                         position absolute
+                        // transition  all .1s
                     .howto-container__btns-text
                         background none
                         position relative
