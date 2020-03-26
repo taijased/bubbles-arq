@@ -33,18 +33,18 @@
         max-width $w-xxl
         padding 80px 148px
         @media screen and (min-width: $w-s) 
-            padding 80px 148px
+            padding 8.888vh 10.277vw
         @media screen and (max-width: $w-s) 
             padding 42px 32px
         .features__header
+            font-size: 40px;
+            max-width 550px
             @media screen and (min-width: $w-l) 
                 margin-bottom 55px
-            @media screen and (min-width: $w-s) and (max-width: $w-l) 
-                font-size: 40px;
             @media screen and (max-width: $w-s) 
                 font-size: 26px;
 
-            max-width 550px
+            
             
         .features-container
             // width 100%
@@ -63,7 +63,7 @@
                 align-items: flex-start;
                 justify-content: center;
                 @media screen and (min-width: $w-l) 
-                    max-width 300px
+                    max-width 21vw
                     
                 @media screen and (max-width: $w-l) 
                     max-width 100%

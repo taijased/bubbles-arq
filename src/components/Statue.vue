@@ -90,15 +90,16 @@ export default {
                 margin 7.222vh 0vw 7.222vh 0px
                 width 100%
             @media screen and (min-width: $w-l) 
-                width 49vw
+                width 50vw
             @media screen and (max-width: $w-l) 
                 width 100vw
             
         .statue-right
-            padding-left 148px
-            padding-top 100px
+            padding-left 10.277vw
+            padding-top 10vh
             @media screen and (min-width: $w-l) 
-                padding-left 80px
+                padding-top 0
+                padding-left 5.5vw
             @media screen and (max-width: $w-s) 
                 padding-left 32px
                 padding-top 42px
@@ -133,7 +134,7 @@ export default {
                 &-column
                   font-family: 'TT Norms Regular';
                   &:last-child
-                    margin-left 7vw
+                    margin-left 10vw
                     @media screen and (max-width: $w-m) 
                       margin-left 0
                     @media screen and (min-width: $w-l) 
@@ -153,7 +154,7 @@ export default {
                       align-items: flex-start;
                       justify-content: flex-start;
                       margin-bottom: 3.666vh;
-                      min-width 281px
+                      // min-width 281px
                       div
                           color: #A6A6A6;
                           display: flex;
@@ -162,7 +163,9 @@ export default {
                           justify-content: center;
                           div
                               color: #A6A6A6;
-                              max-width 250px
+                              max-width 17.4vw
+                              @media screen and (max-width: $w-m) 
+                                  max-width 250px
                           span
                               margin-bottom: 1vh;
                               color white

@@ -136,7 +136,7 @@
     .howto-body
         width 100%
         max-width: $w-xxl
-        padding 80px 148px
+        padding 8.888vh 10.277vw
         background: #14171D;
         display: flex;
         flex-flow: row wrap;
