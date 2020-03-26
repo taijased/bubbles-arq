@@ -43,9 +43,6 @@
                 margin-bottom 55px
             @media screen and (max-width: $w-s) 
                 font-size: 26px;
-
-            
-            
         .features-container
             // width 100%
             display flex
@@ -63,8 +60,8 @@
                 align-items: flex-start;
                 justify-content: center;
                 @media screen and (min-width: $w-l) 
-                    max-width 21vw
-                    
+                    width 21vw
+                    max-width 330px
                 @media screen and (max-width: $w-l) 
                     max-width 100%
                 

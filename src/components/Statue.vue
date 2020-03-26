@@ -163,9 +163,12 @@ export default {
                           justify-content: center;
                           div
                               color: #A6A6A6;
-                              max-width 17.4vw
-                              @media screen and (max-width: $w-m) 
-                                  max-width 250px
+                              max-width 250px
+                              width 17.4vw
+                              @media screen and (max-width: $w-l) 
+                                  width 230px
+                              // @media screen and (min-width: $w-m) 
+                              //     max-width 17.4vw
                           span
                               margin-bottom: 1vh;
                               color white
