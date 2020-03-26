@@ -8,7 +8,6 @@
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
-    "@algoz098/vue-player": "^0.4.3",
     "axios": "^0.19.1",
     "core-js": "^3.4.3",
     "gsap": "^3.2.6",

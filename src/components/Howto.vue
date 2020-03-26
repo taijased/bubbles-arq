@@ -228,11 +228,16 @@
             align-items: center;
             justify-content: flex-start;
             .howto-videvo
+                background-image url('../assets/img/phone-frame1.png')
+                // background-color black
+                background-size 100%
                 position: relative;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
+                position: relative;
+                z-index: 10;
                 @media screen and (min-width: $w-l) 
                     height: 600px;
                     width 300px
