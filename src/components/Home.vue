@@ -40,7 +40,7 @@ export default {
 <style lang="stylus" scoped>
     .home
         background: #4737D6;
-        min-height 100vh
+        min-height 100%
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -58,6 +58,7 @@ export default {
                 margin-top 2.5vh
                 margin-bottom 3vh
             .home__logo
+                margin-bottom 20px
                 img 
                     width 110px
                     height 80px
@@ -66,6 +67,7 @@ export default {
             .home__header
                 // margin-bottom 1.0vh
                 min-height 15vh
+                margin-bottom 20px
                 text-align center
                 display: flex;
                 flex-direction: column;
@@ -109,8 +111,8 @@ export default {
                         width 100vw
             @media screen and (max-width: $w-l) 
                 img
-                    height: 285px;
-                    width 200px
+                    height: 260px;
+                    width 180px
                     &:first-child
                         height: 228px;
                         position: relative;

@@ -12,19 +12,23 @@
         .howto-container__btns-btn(@mouseover='mouseOver(0)')
           .howto-container__btns-back(:style='backs[0]')
           .howto-container__btns-slide(:style='sliders[0]')
+          .howto-container__btns-exclude
           img(src='../assets/img/date-range-24px.svg')
           .howto-container__btns-text {{$t("howto.1")}}
         .howto-container__btns-btn(@mouseover='mouseOver(1)')
           .howto-container__btns-back(:style='backs[1]')
           .howto-container__btns-slide(:style='sliders[1]')
+          .howto-container__btns-exclude
           img(src='../assets/img/edit-24px.svg')
           .howto-container__btns-text {{$t("howto.2")}}
         .howto-container__btns-btn(@mouseover='mouseOver(2)')
           .howto-container__btns-back(:style='backs[2]')
           .howto-container__btns-slide(:style='sliders[2]')
+          .howto-container__btns-exclude
           img(src='../assets/img/person-add-24px.svg')
           .howto-container__btns-text {{$t("howto.3")}}
-      .howto-container__hint {{$t("howto.soon")}} 
+          .howto-container__hint {{$t("howto.soon")}} 
+    //-   .howto-container__hint {{$t("howto.soon")}} 
     .howto-images
       .howto-videvo
         .videvo-cover  
@@ -187,6 +191,8 @@
                     height 48px
                     &:first-child
                         margin-top: 2.8888vh;
+                    &:last-child
+                        margin-bottom 5vh
                     img 
                         position relative
                         z-index 10
@@ -195,18 +201,24 @@
                     .howto-container__btns-back
                         height 48px
                         border-radius: 5px;
-                        z-index 8
+                        z-index 5
                         width 0
                         background #4737D6
                         position absolute
                     .howto-container__btns-slide
                         height 48px
-                        border-radius: 5px;
-                        z-index 9
+                        // border-radius: 5px;
+                        z-index 8
                         width 0
                         background #6C5FDE
                         position absolute
                         // transition  all .1s
+                    .howto-container__btns-exclude
+                        height 48px
+                        z-index 9
+                        width 288px
+                        background-image url('../assets/img/exclude.png')
+                        position absolute
                     .howto-container__btns-text
                         background none
                         position relative
@@ -216,11 +228,11 @@
                         flex-direction: row;
                         align-items: center;
                         justify-content: flex-start;
-            .howto-container__hint
-                margin-top 1vh
-                margin-bottom 5vh
-                margin-left 15px
-                color: gray;
+                    .howto-container__hint
+                        // margin-top 1vh
+                        // margin-bottom 5vh
+                        margin-left 8px
+                        color: gray;
         .howto-images
             position: relative;
             display: flex;
@@ -243,8 +255,8 @@
                     width 300px
                     left: 80px;
                 @media screen and (max-width: $w-l) 
-                    margin-top 2vw
-                    height: 320px;
+                    margin-bottom 20px
+                    height: 330px;
                     width 164px
                 .videvo-cover 
                     background-image url('../assets/img/phone-frame.png')
@@ -257,6 +269,7 @@
                     position: absolute;
                     z-index: 9;
                     width 87.1%
+                    
             img 
                 &:last-child
                     position: relative;

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home" transform="translate(-1161.000000, -2122.000000)" fill="#FFFFFF">
+            <g id="Content/7/Dark" transform="translate(0.000000, 1482.000000)">
+                <g id="Components/Text-Input/Reversed" transform="translate(996.000000, 625.000000)">
+                    <path d="M188.51056,15.5174023 C189.163147,16.204324 189.163147,17.3275735 188.51056,18.0174433 L174.825756,32.4811236 C174.499463,32.8260585 174.072771,33 173.643291,33 C173.216599,33 172.789908,32.8260585 172.463614,32.4811236 L165.491532,25.1107198 C164.836156,24.4237982 164.836156,23.3005487 165.491532,22.6106789 C166.144119,21.9208091 167.201086,21.9208091 167.853673,22.6106789 L173.643291,28.728114 L186.145629,15.5174023 C186.798216,14.8275326 187.855184,14.8275326 188.51056,15.5174023 L188.51056,15.5174023 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

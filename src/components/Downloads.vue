@@ -34,7 +34,7 @@ export default {
         justify-content: center;
         position relative
         z-index 10
-        height 100vh
+        height 100%
         .downloads-blue-rect
             width 100vw
             height 100%
@@ -84,10 +84,10 @@ export default {
                             left 5vw
                     @media screen and (max-width: $w-m) 
                         height 260px
-                        left -5vw
+                        left -12vw
                         &:first-child
-                            height 200px
-                            left 8vw
+                            height 220px
+                            left 13vw
                     
 
                 

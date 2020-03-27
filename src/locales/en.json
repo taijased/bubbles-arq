@@ -90,8 +90,8 @@
           "content": "Import files to ARQ Viewer and demostrate your projects. Our application is able to synchronize with all popular cloud storage.",
           "1": "Import file",
           "2": "Open project",
-          "3": "Share project*",
-          "soon": "*soon"
+          "3": "Share project",
+          "soon": "(soon)"
       },
   
       "downloads":{
