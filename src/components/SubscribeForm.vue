@@ -37,16 +37,10 @@ export default {
             if(!this.emailError && this.emailError !== null) {
                 
                 gsap.to(".statue-email__sendbtn", {duration: 0.9, width: "101.5%", borderRadius: "5px", cursor:"auto"});
-                gsap.to(".statue-email__sendbtn:hover", {duration: 0.9, backgroundColor: "#4737D6"});
+                gsap.to(".statue-email__sendbtn:hover", {delay: 0.9, backgroundColor: "#4737D6"});
                 gsap.to(".email-text", {delay: 0.89, padding: 0, borderRadius: "5px"});
-                // gsap.to(".email-btn__arrow", {duration: 0.4, opacity: 0});
                 gsap.to(".email-btn__gal", {delay: 0.4, duration: 0.5, opacity: 0});
-            //    / gsap.to(imageUrl, {delay: 0.89, backgroundImage:"url('../assets/img/arrow-right-24px.svg')"});
-                
-
-                // gsap.to(".statue-email__sendbtn", {delay: 0.5, position:"absolute", width: "350px", borderRadius: "5px"});
-
-
+           
 
                 this.loading = true
                 const idBoard = "5da06c29c9fb3747328efc66"
